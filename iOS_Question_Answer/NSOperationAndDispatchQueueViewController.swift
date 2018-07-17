@@ -41,40 +41,9 @@ class NSOperationAndDispatchQueueViewController: UIViewController {
     
     @IBAction func startDownload(_ sender: Any) {
         if(self.segmentDownloadType.selectedSegmentIndex == download.GCD.rawValue){
-            DispatchQueue.global(qos: .background).async { // Concurrent queue
-                
-                if let url1 = self.getImageURL(url: self.imageURLs[0]){
-                    if let data1 = self.getImageData(url: url1){
-                        DispatchQueue.main.async { // Serial queue
-                            self.imgView1.image = UIImage(data:data1)
-                        }
-                    }
-                }
-                if let url2 = self.getImageURL(url: self.imageURLs[1]){
-                    if let data2 = self.getImageData(url: url2){
-                        DispatchQueue.main.async {
-                            self.imgView2.image = UIImage(data:data2)
-                        }
-                    }
-                }
-                if let url3 = self.getImageURL(url: self.imageURLs[2]){
-                    if let data3 = self.getImageData(url: url3){
-                        DispatchQueue.main.async {
-                            self.imgView3.image = UIImage(data:data3)
-                        }
-                    }
-                }
-                if let url4 = self.getImageURL(url: self.imageURLs[3]){
-                    if let data4 = self.getImageData(url: url4){
-                        DispatchQueue.main.async {
-                            self.imgView4.image = UIImage(data:data4)
-                        }
-                    }
-                }
-            }
-
+            self.getImageUsingGCD()
         }else{
-            
+            self.getImageUsingOperation()
         }
     }
     
@@ -93,6 +62,113 @@ class NSOperationAndDispatchQueueViewController: UIViewController {
         }
         return data
     }
+    
+    func getImageUsingGCD(){
+        DispatchQueue.global(qos: .background).async { // Concurrent queue
+            if let url1 = self.getImageURL(url: self.imageURLs[0]){
+                if let data1 = self.getImageData(url: url1){
+                    DispatchQueue.main.async { // Serial queue
+                        self.imgView1.image = UIImage(data:data1)
+                    }
+                }
+            }
+            if let url2 = self.getImageURL(url: self.imageURLs[1]){
+                if let data2 = self.getImageData(url: url2){
+                    DispatchQueue.main.async {
+                        self.imgView2.image = UIImage(data:data2)
+                    }
+                }
+            }
+            if let url3 = self.getImageURL(url: self.imageURLs[2]){
+                if let data3 = self.getImageData(url: url3){
+                    DispatchQueue.main.async {
+                        self.imgView3.image = UIImage(data:data3)
+                    }
+                }
+            }
+            if let url4 = self.getImageURL(url: self.imageURLs[3]){
+                if let data4 = self.getImageData(url: url4){
+                    DispatchQueue.main.async {
+                        self.imgView4.image = UIImage(data:data4)
+                    }
+                }
+            }
+        }
+    }
+    
+    func getImageUsingOperation(){
+        // create operation queue
+        let queue = OperationQueue()
+        
+        // create operation
+        let operation1 = BlockOperation{
+            if let url1 = self.getImageURL(url: self.imageURLs[0]){
+                if let data1 = self.getImageData(url: url1){
+                    OperationQueue.main.addOperation({
+                        self.imgView1.image = UIImage(data:data1)
+                    })
+                }
+            }
+        }
+        let operation2 = BlockOperation{
+            if let url2 = self.getImageURL(url: self.imageURLs[1]){
+                if let data2 = self.getImageData(url: url2){
+                    OperationQueue.main.addOperation({
+                        self.imgView2.image = UIImage(data:data2)
+                    })
+                }
+            }
+        }
+        let operation3 = BlockOperation{
+            if let url3 = self.getImageURL(url: self.imageURLs[2]){
+                if let data3 = self.getImageData(url: url3){
+                    OperationQueue.main.addOperation({
+                        self.imgView3.image = UIImage(data:data3)
+                    })
+                }
+            }
+        }
+        let operation4 = BlockOperation{
+            if let url4 = self.getImageURL(url: self.imageURLs[3]){
+                if let data4 = self.getImageData(url: url4){
+                    OperationQueue.main.addOperation({
+                        self.imgView4.image = UIImage(data:data4)
+                    })
+                }
+            }
+        }
+        
+        // add dependency
+        operation2.addDependency(operation1)
+        operation3.addDependency(operation2)
+        operation4.addDependency(operation3)
+        
+        // add operation to queue
+        queue.addOperation(operation1)
+        queue.addOperation(operation2)
+        queue.addOperation(operation3)
+        queue.addOperation(operation4)
+        
+        //operation cancel
+        operation2.cancel()
+
+        
+        //operation completion block
+        operation1.completionBlock = {
+            print("Operation 1 completed")
+        }
+        operation2.completionBlock = {
+            print("operation 2 completed")
+        }
+        operation3.completionBlock = {
+            print("Operation 3 completed")
+        }
+        operation4.completionBlock = {
+            print("Operation 4 completed")
+        }
+
+    }
+    
 }
 
 

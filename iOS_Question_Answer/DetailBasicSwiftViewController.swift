@@ -20,7 +20,7 @@ class DetailBasicSwiftViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.navigationController?.navigationBar.topItem?.title = strTopic
         if let img = imgFunction{
             self.imgViewFunction.image = img
@@ -28,8 +28,6 @@ class DetailBasicSwiftViewController: UIViewController {
         if let txt = txtLog{
             self.txtViewLog.text = txt
         }
-        
-        
     }
 
     override func didReceiveMemoryWarning() {

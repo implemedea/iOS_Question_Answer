@@ -19,7 +19,7 @@ enum topic:String{
 
 class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-    let aryTopic = [topic.tuple,topic.HOF_sort,topic.HOF_map,topic.HOF_reduce,topic.HOF_filter,topic.Any_AnyObject] as [Any]
+    let aryTopic = [topic.tuple.rawValue,topic.HOF_sort.rawValue,topic.HOF_map.rawValue,topic.HOF_reduce.rawValue,topic.HOF_filter.rawValue,topic.Any_AnyObject.rawValue] as [Any]
     let storyBoardMain:UIStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
 
     override func viewDidLoad() {
@@ -27,7 +27,7 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
 //        self.hiderOrderFunction()
 //        self.diffBetweenAnyAndAnyObject()
         
-        self.test()
+        //self.test()
     }
 
     override func didReceiveMemoryWarning() {
@@ -145,6 +145,12 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
         return (aa,tuple )
     }
     
+    //Label
+    
+    func lable(){
+        
+    }
+    
     //MARK:- tableview delegate and datasource
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -159,6 +165,7 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
         let cellId:String = "BasicSwiftCellId"
         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellId)!
         cell.textLabel?.text = aryTopic[indexPath.row] as? String
+        cell.textLabel?.addImageWith(name: "twitter1", behindText: true)
         return cell
     }
     
@@ -171,8 +178,8 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
             return
         }
         
+        childViewController.strTopic = (aryTopic[indexPath.row] as? String)!
         if(aryTopic[indexPath.row] as! String == topic.tuple.rawValue){
-//            childViewController.strTopic = ""
 //            childViewController.imgFunction = UIImage(named: "")
 //            childViewController.txtViewLog
         }else if(aryTopic[indexPath.row] as! String == topic.HOF_map.rawValue){
@@ -199,4 +206,41 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
     
 }
 
+
+extension UILabel {
+    
+    func addImageWith(name: String, behindText: Bool) {
+        
+        let attachment = NSTextAttachment()
+        attachment.image = UIImage(named: name)
+        let attachmentString = NSAttributedString(attachment: attachment)
+        
+        guard let txt = self.text else {
+            return
+        }
+        
+        if behindText {
+            let strLabelText = NSMutableAttributedString(string: txt)
+            strLabelText.append(attachmentString)
+            
+            let myString = " - Example"
+            let myAttribute = [ NSAttributedStringKey.foregroundColor: UIColor.blue ]
+            let myAttrString = NSAttributedString(string: myString, attributes: myAttribute)
+            
+            strLabelText.append(myAttrString)
+            self.attributedText = strLabelText
+        } else {
+            let strLabelText = NSAttributedString(string: txt)
+            let mutableAttachmentString = NSMutableAttributedString(attributedString: attachmentString)
+            mutableAttachmentString.append(strLabelText)
+            self.attributedText = mutableAttachmentString
+        }
+    }
+    
+    func removeImage() {
+        let text = self.text
+        self.attributedText = nil
+        self.text = text
+    }
+}
 
