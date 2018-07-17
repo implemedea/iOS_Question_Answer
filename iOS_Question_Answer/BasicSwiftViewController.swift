@@ -15,11 +15,13 @@ enum topic:String{
     case HOF_reduce = "Higher order function - reduce"
     case HOF_filter = "Higher order function - filter"
     case Any_AnyObject = "Any and AnyObject"
+    case Attributed_String = "Attributed string"
+    
 }
 
 class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-    let aryTopic = [topic.tuple.rawValue,topic.HOF_sort.rawValue,topic.HOF_map.rawValue,topic.HOF_reduce.rawValue,topic.HOF_filter.rawValue,topic.Any_AnyObject.rawValue] as [Any]
+    let aryTopic = [topic.tuple.rawValue,topic.HOF_sort.rawValue,topic.HOF_map.rawValue,topic.HOF_reduce.rawValue,topic.HOF_filter.rawValue,topic.Any_AnyObject.rawValue,topic.Attributed_String.rawValue] as [Any]
     let storyBoardMain:UIStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
 
     override func viewDidLoad() {
@@ -165,7 +167,9 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
         let cellId:String = "BasicSwiftCellId"
         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellId)!
         cell.textLabel?.text = aryTopic[indexPath.row] as? String
-        cell.textLabel?.addImageWith(name: "twitter1", behindText: true)
+        if(aryTopic[indexPath.row] as! String == topic.Attributed_String.rawValue){
+            cell.textLabel?.addImageWith(name: "twitter1", behindText: true)
+        }
         return cell
     }
     
