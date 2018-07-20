@@ -11,6 +11,7 @@ import UIKit
 enum download:Int{
     case GCD
     case Operation
+    case DispatchGroup
 }
 
 class NSOperationAndDispatchQueueViewController: UIViewController {
@@ -21,7 +22,7 @@ class NSOperationAndDispatchQueueViewController: UIViewController {
     @IBOutlet weak var imgView3: UIImageView!
     @IBOutlet weak var imgView1: UIImageView!
     
-    let imageURLs = ["http://www.planetware.com/photos-large/F/france-paris-eiffel-tower.jpg", "http://adriatic-lines.com/wp-content/uploads/2015/04/canal-of-Venice.jpg", "https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&h=350", "https://a00d4717bedc7c196a05-9990652a05993e9ce2692d2d425b2fb5.ssl.cf3.rackcdn.com/product_images/PRODUCT_FLOWERS_Birthday_Flower_Gift_image3.jpg"]
+    let imageURLs = ["http://cdn1.medicalnewstoday.com/content/images/articles/271157-bananas.jpg", "https://media.mercola.com/assets/images/foodfacts/banana-nutrition-facts.jpg", "https://saltmarshrunning.com/wp-content/uploads/2014/09/bananasf.jpg", "http://www.bananeramuchachitaus.com/images/slider/banana-3.jpg"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,8 +43,10 @@ class NSOperationAndDispatchQueueViewController: UIViewController {
     @IBAction func startDownload(_ sender: Any) {
         if(self.segmentDownloadType.selectedSegmentIndex == download.GCD.rawValue){
             self.getImageUsingGCD()
-        }else{
+        }else if(self.segmentDownloadType.selectedSegmentIndex == download.Operation.rawValue){
             self.getImageUsingOperation()
+        }else{
+            self.dispatchGroup()
         }
     }
     
@@ -62,6 +65,19 @@ class NSOperationAndDispatchQueueViewController: UIViewController {
         }
         return data
     }
+    
+    func getImageDataAsync(url:URL, returnCompletion: @escaping (AnyObject) -> ()){
+        DispatchQueue.global().async {
+            let data = try? Data(contentsOf: url)
+            returnCompletion(data as AnyObject)
+        }
+    }
+    
+    //MARK:- Grand Central Dispatch(GCD)
+    
+    /**
+    * Grand Central Dispatch(GCD)
+    */
     
     func getImageUsingGCD(){
         DispatchQueue.global(qos: .background).async { // Concurrent queue
@@ -95,6 +111,12 @@ class NSOperationAndDispatchQueueViewController: UIViewController {
             }
         }
     }
+    
+    //MARK:- NSOperation
+    
+    /**
+     * NSOperation
+     */
     
     func getImageUsingOperation(){
         // create operation queue
@@ -166,8 +188,27 @@ class NSOperationAndDispatchQueueViewController: UIViewController {
         operation4.completionBlock = {
             print("Operation 4 completed")
         }
-
     }
+    
+    //MARK:- Dispatch group
+    
+    func dispatchGroup(){
+        let aryImageView = [self.imgView1,self.imgView2,self.imgView3,self.imgView4]
+        for (index,url) in self.imageURLs.enumerated(){
+            let url:URL = URL(string: url)!
+            self.getImageDataAsync(url: url, returnCompletion: { (data) in
+                OperationQueue.main.addOperation({
+                    let imgView = aryImageView[index]
+                    imgView?.image = UIImage(data:data as! Data)
+                })
+            })
+        }
+        print("image download completed")
+        
+    }
+    
+    
+    
     
 }
 

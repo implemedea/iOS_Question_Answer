@@ -17,7 +17,7 @@ enum ViewController:Int{
 
 class BaseViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
-    let aryContentList:Array = ["Swift concept", "NSOperation & Dispatch queue"]
+    let aryContentList:Array = ["Swift concept", "NSOperation, Dispatch queue and Dispatch group"]
     let storyBoardMain:UIStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +45,7 @@ class BaseViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let cellId:String = "BaseCellId"
         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellId)!
         cell.textLabel?.text = aryContentList[indexPath.row]
+        cell.textLabel?.numberOfLines = 0
         return cell
     }
     
@@ -63,10 +64,10 @@ class BaseViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
     }
     
+   
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return UITableViewAutomaticDimension
     }
-    
     
 
 }

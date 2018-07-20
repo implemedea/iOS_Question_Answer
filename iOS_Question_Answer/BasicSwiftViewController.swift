@@ -16,12 +16,15 @@ enum topic:String{
     case HOF_filter = "Higher order function - filter"
     case Any_AnyObject = "Any and AnyObject"
     case Attributed_String = "Attributed string"
+    case TrailingClosure = "Trailing Closure"
+    case AutoClosure = "Auto Closure"
+    case EscapeClosure = "Escaping Closure"
     
 }
 
 class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-    let aryTopic = [topic.tuple.rawValue,topic.HOF_sort.rawValue,topic.HOF_map.rawValue,topic.HOF_reduce.rawValue,topic.HOF_filter.rawValue,topic.Any_AnyObject.rawValue,topic.Attributed_String.rawValue] as [Any]
+    let aryTopic = [topic.tuple.rawValue,topic.HOF_sort.rawValue,topic.HOF_map.rawValue,topic.HOF_reduce.rawValue,topic.HOF_filter.rawValue,topic.Any_AnyObject.rawValue,topic.Attributed_String.rawValue,topic.TrailingClosure.rawValue,topic.AutoClosure.rawValue,topic.EscapeClosure.rawValue] as [Any]
     let storyBoardMain:UIStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
 
     override func viewDidLoad() {
@@ -147,10 +150,31 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
         return (aa,tuple )
     }
     
-    //Label
+    //MARK:- Trailing closure
     
-    func lable(){
-        
+    func trailingClosureMethod(a:Int,b:Int,completion:(Int)->(Int)){
+        let sum = completion(a+b)
+        print(sum)
+    }
+    
+    //MARK:- auto closure
+    
+    func autoClosure(completion:@autoclosure()->(String)){
+        let sum = completion()
+        print(sum)
+    }
+    
+    //MARK:- escape closure
+    
+    func escapeClosure(url:String, completion:@escaping(Data?,Error?)->()){
+         DispatchQueue.global().async {
+            if let data = try? Data(contentsOf: URL(string:url)!){
+                completion(data,nil)
+            }else{
+                let error:Error = "image not found" as! Error
+                completion(nil,error)
+            }
+        }
     }
     
     //MARK:- tableview delegate and datasource
@@ -196,11 +220,28 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
             
         }else if(aryTopic[indexPath.row] as! String == topic.Any_AnyObject.rawValue){
             
+        }else if(aryTopic[indexPath.row] as! String == topic.TrailingClosure.rawValue){
+            self.trailingClosureMethod(a: 1, b: 2, completion: { (sum) in
+                print("trailing closure sum = \(sum)")
+                return sum
+            })
+        }else if(aryTopic[indexPath.row] as! String == topic.AutoClosure.rawValue){
+            self.autoClosure(completion: "hello world")
+            
+        }else if(aryTopic[indexPath.row] as! String == topic.EscapeClosure.rawValue){
+            self.escapeClosure(url: "http://cdn1.medicalnewstoday.com/content/images/articles/271157-bananas.jpg", completion: { (data, error) in
+                if(error == nil){
+                    DispatchQueue.main.async {
+                        let image = UIImage(data:data!)
+                        childViewController.imgViewFunction.image = image
+                    }
+                }else{
+                    print(error!)
+                }
+            })
+            
         }
-        
-        
         self.navigationController?.pushViewController(childViewController, animated: true)
-        
     }
     
     
