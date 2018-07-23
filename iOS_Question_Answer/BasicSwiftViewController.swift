@@ -9,6 +9,8 @@
 import UIKit
 
 enum topic:String{
+    case ifLet = "ifLet"
+    case guardLet = "guardLet"
     case tuple = "Tuple"
     case HOF_sort = "Higher order function - sort"
     case HOF_map = "Higher order function - map"
@@ -24,7 +26,7 @@ enum topic:String{
 
 class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-    let aryTopic = [topic.tuple.rawValue,topic.HOF_sort.rawValue,topic.HOF_map.rawValue,topic.HOF_reduce.rawValue,topic.HOF_filter.rawValue,topic.Any_AnyObject.rawValue,topic.Attributed_String.rawValue,topic.TrailingClosure.rawValue,topic.AutoClosure.rawValue,topic.EscapeClosure.rawValue] as [Any]
+    let aryTopic = [topic.ifLet.rawValue,topic.guardLet.rawValue,topic.tuple.rawValue,topic.HOF_sort.rawValue,topic.HOF_map.rawValue,topic.HOF_reduce.rawValue,topic.HOF_filter.rawValue,topic.Any_AnyObject.rawValue,topic.Attributed_String.rawValue,topic.TrailingClosure.rawValue,topic.AutoClosure.rawValue,topic.EscapeClosure.rawValue] as [Any]
     let storyBoardMain:UIStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
 
     override func viewDidLoad() {
@@ -41,6 +43,32 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
     }
     
     
+    //MARK:- If let
+    
+    func ifLet() {
+        var name:String? = "some name"
+        name = nil
+       
+        if let constantName = name {
+            print(constantName)
+        } else {
+           print("value is nil")
+        }
+    }
+    
+    //MARK:- Guard let
+    
+    func guardLet() {
+        var name:String? = "some name"
+        name = nil
+        
+        guard let constantName = name else {
+            return
+        }
+        print(constantName)
+    }
+    
+   
   
     //MARK:- Higher order function
     
@@ -136,18 +164,12 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
     
     //MARK:- Tuple
     
-    func test()->(String,Any){
+    func tuple(){
         let tuple = (1,2,"Hi")
         let (age, number, name) = tuple
         let (a,_,_) = tuple
         print(age, number, name, a)
         print(tuple)
-        
-        var aa = ""
-        aa.append("age = \(String(age))")
-        aa.append("number = \(String(number))")
-        aa.append("name = \(name)")
-        return (aa,tuple )
     }
     
     //MARK:- Trailing closure
@@ -207,19 +229,23 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
         }
         
         childViewController.strTopic = (aryTopic[indexPath.row] as? String)!
-        if(aryTopic[indexPath.row] as! String == topic.tuple.rawValue){
-//            childViewController.imgFunction = UIImage(named: "")
-//            childViewController.txtViewLog
+        
+        if(aryTopic[indexPath.row] as! String == topic.ifLet.rawValue){
+            self.ifLet()
+        }else if(aryTopic[indexPath.row] as! String == topic.guardLet.rawValue){
+            self.guardLet()
+        }else if(aryTopic[indexPath.row] as! String == topic.tuple.rawValue){
+            self.tuple()
         }else if(aryTopic[indexPath.row] as! String == topic.HOF_map.rawValue){
-            
+            self.mapHigherOrderFunction()
         }else if(aryTopic[indexPath.row] as! String == topic.HOF_sort.rawValue){
-            
+            self.sortHigerOrderFunction()
         }else if(aryTopic[indexPath.row] as! String == topic.HOF_filter.rawValue){
-            
+            self.filterHigherOrderFunction()
         }else if(aryTopic[indexPath.row] as! String == topic.HOF_reduce.rawValue){
-            
+            self.reduceHigherOrderFunction()
         }else if(aryTopic[indexPath.row] as! String == topic.Any_AnyObject.rawValue){
-            
+            self.diffBetweenAnyAndAnyObject()
         }else if(aryTopic[indexPath.row] as! String == topic.TrailingClosure.rawValue){
             self.trailingClosureMethod(a: 1, b: 2, completion: { (sum) in
                 print("trailing closure sum = \(sum)")
