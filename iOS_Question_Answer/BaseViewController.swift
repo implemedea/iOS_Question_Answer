@@ -12,12 +12,13 @@ import UIKit
 enum ViewController:Int{
     case BaseSwift = 0
     case NSOperation = 1
+    case DeviceRotation = 2
     
 }
 
 class BaseViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
-    let aryContentList:Array = ["Swift concept", "NSOperation, Dispatch queue and Dispatch group"]
+    let aryContentList:Array = ["Swift concept", "NSOperation, Dispatch queue and Dispatch group", "Device rotation specfic view controller"]
     let storyBoardMain:UIStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +57,10 @@ class BaseViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }else if(indexPath.row == ViewController.NSOperation.rawValue){
             childViewController = storyBoardMain.instantiateViewController(withIdentifier: "NSOperationAndDispatchQueueViewController")
             
-        }
+        }else if(indexPath.row == ViewController.DeviceRotation.rawValue){
+            childViewController = storyBoardMain.instantiateViewController(withIdentifier: "DeviceRotationViewController")
+            AppUtility.lockOrientation(.landscape, andRotateTo: .landscapeLeft)
+      }
         guard (childViewController != nil) else {
             return
         }

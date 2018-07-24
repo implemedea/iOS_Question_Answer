@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Device Rotation View Controller-->
+        <scene sceneID="j0Y-eH-z19">
+            <objects>
+                <viewController storyboardIdentifier="DeviceRotationViewController" id="HYg-J5-0EZ" customClass="DeviceRotationViewController" customModule="iOS_Question_Answer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qMB-ct-5AO">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0qf-XP-ew7">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi this is horizondal label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23Y-9Z-Sf6">
+                                        <rect key="frame" x="238" y="177" width="190" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="23Y-9Z-Sf6" firstAttribute="centerX" secondItem="0qf-XP-ew7" secondAttribute="centerX" id="6Dp-Uf-Hj5"/>
+                                    <constraint firstItem="23Y-9Z-Sf6" firstAttribute="centerY" secondItem="0qf-XP-ew7" secondAttribute="centerY" id="MHY-Xg-LRO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0qf-XP-ew7" firstAttribute="leading" secondItem="qMB-ct-5AO" secondAttribute="leading" id="dBA-sA-uE5"/>
+                            <constraint firstAttribute="trailing" secondItem="0qf-XP-ew7" secondAttribute="trailing" id="dXT-HS-eKn"/>
+                            <constraint firstItem="0qf-XP-ew7" firstAttribute="top" secondItem="9fw-h4-w3e" secondAttribute="top" id="ytd-14-qPW"/>
+                            <constraint firstItem="0qf-XP-ew7" firstAttribute="bottom" secondItem="9fw-h4-w3e" secondAttribute="bottom" id="zgF-FY-Hgl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9fw-h4-w3e"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mFr-Fx-386" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="632.83358320839591" y="773.60000000000002"/>
+        </scene>
+    </scenes>
+</document>

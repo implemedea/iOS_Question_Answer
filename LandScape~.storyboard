@@ -138,7 +138,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" id="Th5-3z-hlg"/>
                         <segue destination="7Vs-VO-7MA" kind="show" id="aeP-EL-EGy"/>
-                        <segue destination="2jV-7r-1Rc" kind="show" id="AXD-AO-eUy"/>
+                        <segue destination="HYg-J5-0EZ" kind="show" id="AXD-AO-eUy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fbr-OR-Ngr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -232,6 +232,21 @@
             </objects>
             <point key="canvasLocation" x="1416.8" y="423.23838080959524"/>
         </scene>
+        <!--Device Rotation View Controller-->
+        <scene sceneID="j0Y-eH-z19">
+            <objects>
+                <viewController storyboardIdentifier="DeviceRotationViewController" id="HYg-J5-0EZ" customClass="DeviceRotationViewController" customModule="iOS_Question_Answer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qMB-ct-5AO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9fw-h4-w3e"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mFr-Fx-386" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="633" y="775"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="osF-xg-y8u">
             <objects>
@@ -249,14 +264,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p71-Bh-Icy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-254.40000000000001" y="18.890554722638683"/>
-        </scene>
-        <!--DeviceRotationViewController-->
-        <scene sceneID="8j8-Si-yyz">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="DeviceRotationViewController" storyboardName="LandScape" referencedIdentifier="DeviceRotationViewController" id="2jV-7r-1Rc" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HMb-ft-fuB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="633" y="775"/>
         </scene>
     </scenes>
     <resources>

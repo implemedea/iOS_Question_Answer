@@ -11,6 +11,7 @@ import UIKit
 enum topic:String{
     case ifLet = "ifLet"
     case guardLet = "guardLet"
+    case LazyProperty = "LazyProperty"
     case tuple = "Tuple"
     case HOF_sort = "Higher order function - sort"
     case HOF_map = "Higher order function - map"
@@ -26,15 +27,18 @@ enum topic:String{
 
 class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-    let aryTopic = [topic.ifLet.rawValue,topic.guardLet.rawValue,topic.tuple.rawValue,topic.HOF_sort.rawValue,topic.HOF_map.rawValue,topic.HOF_reduce.rawValue,topic.HOF_filter.rawValue,topic.Any_AnyObject.rawValue,topic.Attributed_String.rawValue,topic.TrailingClosure.rawValue,topic.AutoClosure.rawValue,topic.EscapeClosure.rawValue] as [Any]
+    
+    lazy var someVariable:String = { [unowned self] in
+        return "I am an iOS developer"
+    }()
+    
+    let aryTopic = [topic.ifLet.rawValue,topic.guardLet.rawValue,topic.LazyProperty.rawValue,topic.tuple.rawValue,topic.HOF_sort.rawValue,topic.HOF_map.rawValue,topic.HOF_reduce.rawValue,topic.HOF_filter.rawValue,topic.Any_AnyObject.rawValue,topic.Attributed_String.rawValue,topic.TrailingClosure.rawValue,topic.AutoClosure.rawValue,topic.EscapeClosure.rawValue] as [Any]
     let storyBoardMain:UIStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.hiderOrderFunction()
-//        self.diffBetweenAnyAndAnyObject()
         
-        //self.test()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,17 +72,14 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
         print(constantName)
     }
     
-   
-  
-    //MARK:- Higher order function
+    //MARK:- lazy property
     
-    func hiderOrderFunction(){
-       self.sortHigerOrderFunction()
-        self.mapHigherOrderFunction()
-        self.filterHigherOrderFunction()
-        self.reduceHigherOrderFunction()
+    struct lazyVariable {
+        lazy var someVariable: String = {
+            return "I am an iOS developer"
+        }()
     }
-
+    
     //MARK:- Higher order function - sort
     func sortHigerOrderFunction(){
         //sort
@@ -234,6 +235,13 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
             self.ifLet()
         }else if(aryTopic[indexPath.row] as! String == topic.guardLet.rawValue){
             self.guardLet()
+        }else if(aryTopic[indexPath.row] as! String == topic.LazyProperty.rawValue){
+            //class
+            print("lazy variable in class = \(self.someVariable)")
+            
+            // struct
+            var objLazyVariable = lazyVariable()
+            print("lazy variable in struct = \(objLazyVariable.someVariable)")
         }else if(aryTopic[indexPath.row] as! String == topic.tuple.rawValue){
             self.tuple()
         }else if(aryTopic[indexPath.row] as! String == topic.HOF_map.rawValue){

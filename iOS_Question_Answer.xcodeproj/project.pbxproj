@@ -15,6 +15,8 @@
 		FBCE544520A42E81004BCE02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBCE544320A42E81004BCE02 /* LaunchScreen.storyboard */; };
 		FBCE545020A42E83004BCE02 /* iOS_Question_AnswerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCE544F20A42E83004BCE02 /* iOS_Question_AnswerTests.swift */; };
 		FBCE545B20A42E83004BCE02 /* iOS_Question_AnswerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCE545A20A42E83004BCE02 /* iOS_Question_AnswerUITests.swift */; };
+		FBCFDF5E21061B230081DE00 /* DeviceRotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCFDF5D21061B230081DE00 /* DeviceRotationViewController.swift */; };
+		FBCFDF602107092B0081DE00 /* LandScape.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBCFDF5F2107092B0081DE00 /* LandScape.storyboard */; };
 		FBE26BB220EF8B5C0021987F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE26BB120EF8B5C0021987F /* BaseViewController.swift */; };
 		FBE26BB420EFAAAB0021987F /* NSOperationAndDispatchQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE26BB320EFAAAB0021987F /* NSOperationAndDispatchQueueViewController.swift */; };
 		FBFB51D220F4C94300CA08F3 /* DetailBasicSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFB51D120F4C94300CA08F3 /* DetailBasicSwiftViewController.swift */; };
@@ -52,6 +54,8 @@
 		FBCE545620A42E83004BCE02 /* iOS_Question_AnswerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_Question_AnswerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCE545A20A42E83004BCE02 /* iOS_Question_AnswerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Question_AnswerUITests.swift; sourceTree = "<group>"; };
 		FBCE545C20A42E83004BCE02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBCFDF5D21061B230081DE00 /* DeviceRotationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRotationViewController.swift; sourceTree = "<group>"; };
+		FBCFDF5F2107092B0081DE00 /* LandScape.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LandScape.storyboard; sourceTree = "<group>"; };
 		FBE26BB120EF8B5C0021987F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FBE26BB320EFAAAB0021987F /* NSOperationAndDispatchQueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSOperationAndDispatchQueueViewController.swift; sourceTree = "<group>"; };
 		FBFB51D120F4C94300CA08F3 /* DetailBasicSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBasicSwiftViewController.swift; sourceTree = "<group>"; };
@@ -110,7 +114,9 @@
 				FBE26BB120EF8B5C0021987F /* BaseViewController.swift */,
 				FBE26BB320EFAAAB0021987F /* NSOperationAndDispatchQueueViewController.swift */,
 				FBFB51D120F4C94300CA08F3 /* DetailBasicSwiftViewController.swift */,
+				FBCFDF5D21061B230081DE00 /* DeviceRotationViewController.swift */,
 				FBCE543B20A42E81004BCE02 /* Main.storyboard */,
+				FBCFDF5F2107092B0081DE00 /* LandScape.storyboard */,
 				FBCE544120A42E81004BCE02 /* Assets.xcassets */,
 				FBCE544320A42E81004BCE02 /* LaunchScreen.storyboard */,
 				FBCE544620A42E81004BCE02 /* Info.plist */,
@@ -246,6 +252,7 @@
 			files = (
 				FBCE544520A42E81004BCE02 /* LaunchScreen.storyboard in Resources */,
 				FBCE544220A42E81004BCE02 /* Assets.xcassets in Resources */,
+				FBCFDF602107092B0081DE00 /* LandScape.storyboard in Resources */,
 				FBCE543D20A42E81004BCE02 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +280,7 @@
 			files = (
 				FBCE544020A42E81004BCE02 /* iOS_Question_Answer.xcdatamodeld in Sources */,
 				FBE26BB220EF8B5C0021987F /* BaseViewController.swift in Sources */,
+				FBCFDF5E21061B230081DE00 /* DeviceRotationViewController.swift in Sources */,
 				FBFB51D220F4C94300CA08F3 /* DetailBasicSwiftViewController.swift in Sources */,
 				FBE26BB420EFAAAB0021987F /* NSOperationAndDispatchQueueViewController.swift in Sources */,
 				FBCE543A20A42E81004BCE02 /* BasicSwiftViewController.swift in Sources */,
