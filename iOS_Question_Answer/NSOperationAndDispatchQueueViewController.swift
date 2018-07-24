@@ -193,18 +193,24 @@ class NSOperationAndDispatchQueueViewController: UIViewController {
     //MARK:- Dispatch group
     
     func dispatchGroup(){
+        let dispatchGroup = DispatchGroup()
         let aryImageView = [self.imgView1,self.imgView2,self.imgView3,self.imgView4]
         for (index,url) in self.imageURLs.enumerated(){
             let url:URL = URL(string: url)!
+            dispatchGroup.enter()
             self.getImageDataAsync(url: url, returnCompletion: { (data) in
                 OperationQueue.main.addOperation({
                     let imgView = aryImageView[index]
                     imgView?.image = UIImage(data:data as! Data)
+                    dispatchGroup.leave()
                 })
             })
         }
-        print("image download completed")
         
+        dispatchGroup.notify(queue: DispatchQueue.main) {
+            print("image download completed")
+        }
+        print("For loop completed")
     }
     
     
