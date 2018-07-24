@@ -17,6 +17,7 @@
 		FBCE545B20A42E83004BCE02 /* iOS_Question_AnswerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCE545A20A42E83004BCE02 /* iOS_Question_AnswerUITests.swift */; };
 		FBCFDF5E21061B230081DE00 /* DeviceRotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCFDF5D21061B230081DE00 /* DeviceRotationViewController.swift */; };
 		FBCFDF6321070A6B0081DE00 /* LandScape.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBCFDF6121070A6B0081DE00 /* LandScape.storyboard */; };
+		FBCFDF65210766EC0081DE00 /* LocalNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCFDF64210766EB0081DE00 /* LocalNotificationViewController.swift */; };
 		FBE26BB220EF8B5C0021987F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE26BB120EF8B5C0021987F /* BaseViewController.swift */; };
 		FBE26BB420EFAAAB0021987F /* NSOperationAndDispatchQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE26BB320EFAAAB0021987F /* NSOperationAndDispatchQueueViewController.swift */; };
 		FBFB51D220F4C94300CA08F3 /* DetailBasicSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFB51D120F4C94300CA08F3 /* DetailBasicSwiftViewController.swift */; };
@@ -56,6 +57,7 @@
 		FBCE545C20A42E83004BCE02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBCFDF5D21061B230081DE00 /* DeviceRotationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRotationViewController.swift; sourceTree = "<group>"; };
 		FBCFDF6221070A6B0081DE00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LandScape.storyboard; sourceTree = "<group>"; };
+		FBCFDF64210766EB0081DE00 /* LocalNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationViewController.swift; sourceTree = "<group>"; };
 		FBE26BB120EF8B5C0021987F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FBE26BB320EFAAAB0021987F /* NSOperationAndDispatchQueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSOperationAndDispatchQueueViewController.swift; sourceTree = "<group>"; };
 		FBFB51D120F4C94300CA08F3 /* DetailBasicSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBasicSwiftViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		FBCE543620A42E81004BCE02 /* iOS_Question_Answer */ = {
 			isa = PBXGroup;
 			children = (
+				FBCFDF64210766EB0081DE00 /* LocalNotificationViewController.swift */,
 				FBCE543720A42E81004BCE02 /* AppDelegate.swift */,
 				FBCE543920A42E81004BCE02 /* BasicSwiftViewController.swift */,
 				FBE26BB120EF8B5C0021987F /* BaseViewController.swift */,
@@ -284,6 +287,7 @@
 				FBFB51D220F4C94300CA08F3 /* DetailBasicSwiftViewController.swift in Sources */,
 				FBE26BB420EFAAAB0021987F /* NSOperationAndDispatchQueueViewController.swift in Sources */,
 				FBCE543A20A42E81004BCE02 /* BasicSwiftViewController.swift in Sources */,
+				FBCFDF65210766EC0081DE00 /* LocalNotificationViewController.swift in Sources */,
 				FBCE543820A42E81004BCE02 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,7 +464,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iOS_Question_Answer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "sebastin.iOS-Question-Answer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -475,7 +479,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iOS_Question_Answer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "sebastin.iOS-Question-Answer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
