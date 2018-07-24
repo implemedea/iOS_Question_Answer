@@ -111,17 +111,13 @@
 		FBCE543620A42E81004BCE02 /* iOS_Question_Answer */ = {
 			isa = PBXGroup;
 			children = (
-				FBCFDF64210766EB0081DE00 /* LocalNotificationViewController.swift */,
-				FBCE543720A42E81004BCE02 /* AppDelegate.swift */,
-				FBCE543920A42E81004BCE02 /* BasicSwiftViewController.swift */,
-				FBE26BB120EF8B5C0021987F /* BaseViewController.swift */,
-				FBE26BB320EFAAAB0021987F /* NSOperationAndDispatchQueueViewController.swift */,
-				FBFB51D120F4C94300CA08F3 /* DetailBasicSwiftViewController.swift */,
-				FBCFDF5D21061B230081DE00 /* DeviceRotationViewController.swift */,
-				FBCFDF6121070A6B0081DE00 /* LandScape.storyboard */,
-				FBCE543B20A42E81004BCE02 /* Main.storyboard */,
+				FBCFDF6B2107698A0081DE00 /* ThirdParty */,
+				FBCFDF6A2107697C0081DE00 /* Utility */,
+				FBCFDF69210769750081DE00 /* Model */,
+				FBCFDF68210769410081DE00 /* StoryBoard */,
+				FBCFDF67210769340081DE00 /* AppDelegate */,
+				FBCFDF66210769220081DE00 /* ViewController */,
 				FBCE544120A42E81004BCE02 /* Assets.xcassets */,
-				FBCE544320A42E81004BCE02 /* LaunchScreen.storyboard */,
 				FBCE544620A42E81004BCE02 /* Info.plist */,
 				FBCE543E20A42E81004BCE02 /* iOS_Question_Answer.xcdatamodeld */,
 			);
@@ -144,6 +140,58 @@
 				FBCE545C20A42E83004BCE02 /* Info.plist */,
 			);
 			path = iOS_Question_AnswerUITests;
+			sourceTree = "<group>";
+		};
+		FBCFDF66210769220081DE00 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FBCFDF64210766EB0081DE00 /* LocalNotificationViewController.swift */,
+				FBCE543920A42E81004BCE02 /* BasicSwiftViewController.swift */,
+				FBE26BB120EF8B5C0021987F /* BaseViewController.swift */,
+				FBE26BB320EFAAAB0021987F /* NSOperationAndDispatchQueueViewController.swift */,
+				FBFB51D120F4C94300CA08F3 /* DetailBasicSwiftViewController.swift */,
+				FBCFDF5D21061B230081DE00 /* DeviceRotationViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FBCFDF67210769340081DE00 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				FBCE543720A42E81004BCE02 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		FBCFDF68210769410081DE00 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				FBCFDF6121070A6B0081DE00 /* LandScape.storyboard */,
+				FBCE543B20A42E81004BCE02 /* Main.storyboard */,
+				FBCE544320A42E81004BCE02 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		FBCFDF69210769750081DE00 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FBCFDF6A2107697C0081DE00 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		FBCFDF6B2107698A0081DE00 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdParty;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
