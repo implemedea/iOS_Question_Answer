@@ -183,7 +183,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1K-US-jAG">
-                                <rect key="frame" x="124" y="414" width="127" height="30"/>
+                                <rect key="frame" x="124" y="436" width="127" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Lsb-dt-JZ2"/>
                                 </constraints>
@@ -193,14 +193,15 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="59l-Zl-YQb">
-                                <rect key="frame" x="30" y="343" width="314" height="29"/>
+                                <rect key="frame" x="0.0" y="343" width="375" height="51"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="UoY-wE-oTp"/>
+                                    <constraint firstAttribute="height" constant="50" id="UoY-wE-oTp"/>
                                 </constraints>
                                 <segments>
                                     <segment title="GCD"/>
                                     <segment title="NSOperation"/>
                                     <segment title="Dispatch Group"/>
+                                    <segment title="Dispatch work item"/>
                                 </segments>
                                 <connections>
                                     <action selector="downloadTypeSelection:" destination="7Vs-VO-7MA" eventType="valueChanged" id="Bad-Jv-3o7"/>
@@ -210,13 +211,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="z8C-vj-v0v" firstAttribute="trailing" secondItem="i1K-US-jAG" secondAttribute="trailing" constant="124" id="CDq-jA-Fck"/>
-                            <constraint firstItem="59l-Zl-YQb" firstAttribute="leading" secondItem="z8C-vj-v0v" secondAttribute="leading" constant="30" id="HJg-4s-kCY"/>
+                            <constraint firstItem="59l-Zl-YQb" firstAttribute="leading" secondItem="z8C-vj-v0v" secondAttribute="leading" id="HJg-4s-kCY"/>
                             <constraint firstItem="ZE9-l0-SLm" firstAttribute="leading" secondItem="z8C-vj-v0v" secondAttribute="leading" id="Ir7-dY-oDe"/>
                             <constraint firstItem="i1K-US-jAG" firstAttribute="top" secondItem="59l-Zl-YQb" secondAttribute="bottom" constant="43" id="KnM-wk-oWa"/>
                             <constraint firstItem="i1K-US-jAG" firstAttribute="leading" secondItem="z8C-vj-v0v" secondAttribute="leading" constant="124" id="Qjc-r6-2wI"/>
                             <constraint firstItem="ZE9-l0-SLm" firstAttribute="trailing" secondItem="z8C-vj-v0v" secondAttribute="trailing" id="Rlb-Ls-Ubc"/>
                             <constraint firstItem="ZE9-l0-SLm" firstAttribute="top" secondItem="tmn-tW-4lD" secondAttribute="top" constant="60" id="Sk2-nK-h2s"/>
-                            <constraint firstItem="z8C-vj-v0v" firstAttribute="trailing" secondItem="59l-Zl-YQb" secondAttribute="trailing" constant="31" id="SlK-i7-EX9"/>
+                            <constraint firstItem="z8C-vj-v0v" firstAttribute="trailing" secondItem="59l-Zl-YQb" secondAttribute="trailing" id="SlK-i7-EX9"/>
                             <constraint firstItem="z8C-vj-v0v" firstAttribute="bottom" secondItem="ZE9-l0-SLm" secondAttribute="bottom" constant="351" id="eGJ-7z-DEf"/>
                             <constraint firstItem="59l-Zl-YQb" firstAttribute="top" secondItem="ZE9-l0-SLm" secondAttribute="bottom" constant="27" id="oUi-bJ-YcU"/>
                         </constraints>

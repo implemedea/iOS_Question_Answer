@@ -12,6 +12,7 @@ enum download:Int{
     case GCD
     case Operation
     case DispatchGroup
+    case DispatchWorkItem
 }
 
 class NSOperationAndDispatchQueueViewController: UIViewController {
@@ -45,8 +46,10 @@ class NSOperationAndDispatchQueueViewController: UIViewController {
             self.getImageUsingGCD()
         }else if(self.segmentDownloadType.selectedSegmentIndex == download.Operation.rawValue){
             self.getImageUsingOperation()
-        }else{
+        }else if(self.segmentDownloadType.selectedSegmentIndex == download.DispatchGroup.rawValue){
             self.dispatchGroup()
+        }else if(self.segmentDownloadType.selectedSegmentIndex == download.DispatchWorkItem.rawValue){
+            self.dispatchWorkItem()
         }
     }
     
@@ -88,6 +91,7 @@ class NSOperationAndDispatchQueueViewController: UIViewController {
                     }
                 }
             }
+            
             if let url2 = self.getImageURL(url: self.imageURLs[1]){
                 if let data2 = self.getImageData(url: url2){
                     DispatchQueue.main.async {
@@ -199,7 +203,7 @@ class NSOperationAndDispatchQueueViewController: UIViewController {
             let url:URL = URL(string: url)!
             dispatchGroup.enter()
             self.getImageDataAsync(url: url, returnCompletion: { (data) in
-                OperationQueue.main.addOperation({
+                DispatchQueue.main.async(execute: {
                     let imgView = aryImageView[index]
                     imgView?.image = UIImage(data:data as! Data)
                     dispatchGroup.leave()
@@ -213,9 +217,37 @@ class NSOperationAndDispatchQueueViewController: UIViewController {
         print("For loop completed")
     }
     
+    //MARK:- Dispatch work item
     
-    
-    
+    func dispatchWorkItem(){
+        let dispatchGroup = DispatchGroup()
+        let aryImageView = [self.imgView1,self.imgView2,self.imgView3,self.imgView4]
+        var blocks:[DispatchWorkItem] = []
+        for (index,url) in self.imageURLs.enumerated(){
+            dispatchGroup.enter()
+            let block = DispatchWorkItem(qos: .background, flags: .inheritQoS, block: {
+                let url:URL = URL(string: url)!
+                self.getImageDataAsync(url: url, returnCompletion: { (data) in
+                    DispatchQueue.main.async(execute: {
+                        let imgView = aryImageView[index]
+                        imgView?.image = UIImage(data:data as! Data)
+                        dispatchGroup.leave()
+                    })
+                })
+            })
+            blocks.append(block)
+            DispatchQueue.main.async(execute: block)
+        }
+        
+        let cancelBlock = blocks[0]
+        cancelBlock.cancel()
+        dispatchGroup.leave()
+        
+        dispatchGroup.notify(queue: DispatchQueue.main) {
+            print("image download completed")
+        }
+        print("For loop completed")
+    }
 }
 
 

@@ -30,8 +30,6 @@ class LocalNotificationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        UNUserNotificationCenter.current().delegate = self
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {

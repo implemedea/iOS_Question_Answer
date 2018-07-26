@@ -111,68 +111,6 @@
             endingLineNumber = "36"
             landmarkName = "BasicSwiftViewController"
             landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "variable initialization expression of iOS_Question_Answer.BasicSwiftViewController.aryTopic : Swift.Array&lt;Any&gt;"
-                  moduleName = "iOS_Question_Answer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Sebastin/Documents/Sebastin/iOS_Project/iOS_Question_Answer/iOS_Question_Answer/BasicSwiftViewController.swift"
-                  timestampString = "554110999.5702569"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "iOS_Question_Answer.BasicSwiftViewController.aryTopic.getter : Swift.Array&lt;Any&gt;"
-                  moduleName = "iOS_Question_Answer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Sebastin/Documents/Sebastin/iOS_Project/iOS_Question_Answer/iOS_Question_Answer/BasicSwiftViewController.swift"
-                  timestampString = "554110999.574035"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "109">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "iOS_Question_Answer.BasicSwiftViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; iOS_Question_Answer.BasicSwiftViewController"
-                  moduleName = "iOS_Question_Answer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Sebastin/Documents/Sebastin/iOS_Project/iOS_Question_Answer/iOS_Question_Answer/BasicSwiftViewController.swift"
-                  timestampString = "554110999.577239"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "301">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "iOS_Question_Answer.BasicSwiftViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;iOS_Question_Answer.BasicSwiftViewController&gt;"
-                  moduleName = "iOS_Question_Answer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Sebastin/Documents/Sebastin/iOS_Project/iOS_Question_Answer/iOS_Question_Answer/BasicSwiftViewController.swift"
-                  timestampString = "554110999.580357"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "236">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -445,51 +383,68 @@
             endingLineNumber = "32"
             landmarkName = "AppDelegate"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS_Question_Answer/ViewController/NSOperationAndDispatchQueueViewController.swift"
+            timestampString = "554293986.2277941"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "getImageDataAsync(url:returnCompletion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS_Question_Answer/ViewController/NSOperationAndDispatchQueueViewController.swift"
+            timestampString = "554293986.228267"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "getImageDataAsync(url:returnCompletion:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "iOS_Question_Answer.AppDelegate.window.getter : Swift.Optional&lt;__ObjC.UIWindow&gt;"
+                  symbolName = "iOS_Question_Answer.NSOperationAndDispatchQueueViewController.getImageDataAsync(url: Foundation.URL, returnCompletion: (Swift.AnyObject) -&gt; ()) -&gt; ()"
                   moduleName = "iOS_Question_Answer"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Sebastin/Documents/Sebastin/iOS_Project/iOS_Question_Answer/iOS_Question_Answer/AppDelegate.swift"
-                  timestampString = "554110999.6655051"
+                  urlString = "file:///Users/Sebastin/Documents/Sebastin/iOS_Project/iOS_Question_Answer/iOS_Question_Answer/ViewController/NSOperationAndDispatchQueueViewController.swift"
+                  timestampString = "554293838.855778"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "109">
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "29">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "iOS_Question_Answer.AppDelegate.window.setter : Swift.Optional&lt;__ObjC.UIWindow&gt;"
+                  symbolName = "closure #1 () -&gt; () in iOS_Question_Answer.NSOperationAndDispatchQueueViewController.getImageDataAsync(url: Foundation.URL, returnCompletion: (Swift.AnyObject) -&gt; ()) -&gt; ()"
                   moduleName = "iOS_Question_Answer"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Sebastin/Documents/Sebastin/iOS_Project/iOS_Question_Answer/iOS_Question_Answer/AppDelegate.swift"
-                  timestampString = "554110999.668759"
+                  urlString = "file:///Users/Sebastin/Documents/Sebastin/iOS_Project/iOS_Question_Answer/iOS_Question_Answer/ViewController/NSOperationAndDispatchQueueViewController.swift"
+                  timestampString = "554293838.859087"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "112">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "iOS_Question_Answer.AppDelegate.init() -&gt; iOS_Question_Answer.AppDelegate"
-                  moduleName = "iOS_Question_Answer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Sebastin/Documents/Sebastin/iOS_Project/iOS_Question_Answer/iOS_Question_Answer/AppDelegate.swift"
-                  timestampString = "554110999.671977"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "27">
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "32">
                </Location>
             </Locations>
          </BreakpointContent>
