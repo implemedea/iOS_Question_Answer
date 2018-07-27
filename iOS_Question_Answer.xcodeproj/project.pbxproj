@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB9E216F2109FE950065A1C6 /* CustomSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9E216E2109FE950065A1C6 /* CustomSlider.xib */; };
+		FBB5720B210B3510002F61BC /* CommonFunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB5720A210B3510002F61BC /* CommonFunctionViewController.swift */; };
+		FBB5720F210B39A8002F61BC /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB5720E210B39A8002F61BC /* GlobalConstant.swift */; };
 		FBCE543820A42E81004BCE02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCE543720A42E81004BCE02 /* AppDelegate.swift */; };
 		FBCE543A20A42E81004BCE02 /* BasicSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCE543920A42E81004BCE02 /* BasicSwiftViewController.swift */; };
 		FBCE543D20A42E81004BCE02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBCE543B20A42E81004BCE02 /* Main.storyboard */; };
@@ -41,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB9E216E2109FE950065A1C6 /* CustomSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSlider.xib; sourceTree = "<group>"; };
+		FBB5720A210B3510002F61BC /* CommonFunctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctionViewController.swift; sourceTree = "<group>"; };
+		FBB5720E210B39A8002F61BC /* GlobalConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
 		FBCE543420A42E81004BCE02 /* iOS_Question_Answer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Question_Answer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCE543720A42E81004BCE02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBCE543920A42E81004BCE02 /* BasicSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSwiftViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +94,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB9E216D2109FE3A0065A1C6 /* CustomComponent */ = {
+			isa = PBXGroup;
+			children = (
+				FB9E216E2109FE950065A1C6 /* CustomSlider.xib */,
+			);
+			path = CustomComponent;
+			sourceTree = "<group>";
+		};
+		FBB5720D210B3976002F61BC /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				FBB5720E210B39A8002F61BC /* GlobalConstant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		FBCE542B20A42E80004BCE02 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +133,8 @@
 		FBCE543620A42E81004BCE02 /* iOS_Question_Answer */ = {
 			isa = PBXGroup;
 			children = (
+				FBB5720D210B3976002F61BC /* Constant */,
+				FB9E216D2109FE3A0065A1C6 /* CustomComponent */,
 				FBCFDF6B2107698A0081DE00 /* ThirdParty */,
 				FBCFDF6A2107697C0081DE00 /* Utility */,
 				FBCFDF69210769750081DE00 /* Model */,
@@ -151,6 +175,7 @@
 				FBE26BB320EFAAAB0021987F /* NSOperationAndDispatchQueueViewController.swift */,
 				FBFB51D120F4C94300CA08F3 /* DetailBasicSwiftViewController.swift */,
 				FBCFDF5D21061B230081DE00 /* DeviceRotationViewController.swift */,
+				FBB5720A210B3510002F61BC /* CommonFunctionViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -304,6 +329,7 @@
 				FBCE544520A42E81004BCE02 /* LaunchScreen.storyboard in Resources */,
 				FBCE544220A42E81004BCE02 /* Assets.xcassets in Resources */,
 				FBCFDF6321070A6B0081DE00 /* LandScape.storyboard in Resources */,
+				FB9E216F2109FE950065A1C6 /* CustomSlider.xib in Resources */,
 				FBCE543D20A42E81004BCE02 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +360,8 @@
 				FBCFDF5E21061B230081DE00 /* DeviceRotationViewController.swift in Sources */,
 				FBFB51D220F4C94300CA08F3 /* DetailBasicSwiftViewController.swift in Sources */,
 				FBE26BB420EFAAAB0021987F /* NSOperationAndDispatchQueueViewController.swift in Sources */,
+				FBB5720B210B3510002F61BC /* CommonFunctionViewController.swift in Sources */,
+				FBB5720F210B39A8002F61BC /* GlobalConstant.swift in Sources */,
 				FBCE543A20A42E81004BCE02 /* BasicSwiftViewController.swift in Sources */,
 				FBCFDF65210766EC0081DE00 /* LocalNotificationViewController.swift in Sources */,
 				FBCE543820A42E81004BCE02 /* AppDelegate.swift in Sources */,

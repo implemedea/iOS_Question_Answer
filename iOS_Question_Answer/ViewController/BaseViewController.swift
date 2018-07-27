@@ -14,11 +14,12 @@ enum ViewController:Int{
     case NSOperation = 1
     case DeviceRotation = 2
     case LocalNotification = 3
+    case CommonFunction = 4
 }
 
 class BaseViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
-    let aryContentList:Array = ["Swift concept", "NSOperation, Dispatch queue and Dispatch group", "Device rotation specfic view controller", "Local Notification"]
+    let aryContentList:Array = ["Swift concept", "NSOperation, Dispatch queue and Dispatch group", "Device rotation specfic view controller", "Local Notification", "Common Function"]
     let storyBoardMain:UIStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +63,8 @@ class BaseViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             AppUtility.lockOrientation(.landscape, andRotateTo: .landscapeLeft)
         }else if(indexPath.row == ViewController.LocalNotification.rawValue){
             childViewController = storyBoardMain.instantiateViewController(withIdentifier: "LocalNotificationViewController")
+        }else if(indexPath.row == ViewController.CommonFunction.rawValue){
+            childViewController = storyBoardMain.instantiateViewController(withIdentifier: "CommonFunctionViewController")
         }
         
         guard (childViewController != nil) else {

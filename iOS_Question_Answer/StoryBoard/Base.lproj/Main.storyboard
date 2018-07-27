@@ -247,6 +247,7 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="RB8-2T-wsW" kind="relationship" relationship="rootViewController" id="fwc-48-noP"/>
+                        <segue destination="9kS-hx-3NU" kind="show" id="e4G-Dg-XYi"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p71-Bh-Icy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -302,6 +303,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cxR-rM-8yX" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="633" y="-777"/>
+        </scene>
+        <!--CommonFunctionViewController-->
+        <scene sceneID="Bf8-PI-cfQ">
+            <objects>
+                <viewController storyboardIdentifier="CommonFunctionViewController" id="9kS-hx-3NU" userLabel="CommonFunctionViewController" customClass="CommonFunctionViewController" customModule="iOS_Question_Answer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jux-b6-Gp6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oi1-Pm-19g">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CommonFunctionCellId" id="dyr-uG-zRA">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dyr-uG-zRA" id="kAh-ZU-k3D">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9kS-hx-3NU" id="QTs-No-31X"/>
+                                    <outlet property="delegate" destination="9kS-hx-3NU" id="lLe-KE-hLL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oi1-Pm-19g" firstAttribute="top" secondItem="jux-b6-Gp6" secondAttribute="top" id="62s-TF-8wJ"/>
+                            <constraint firstItem="oi1-Pm-19g" firstAttribute="leading" secondItem="osX-EO-kzZ" secondAttribute="leading" id="G35-8l-fMH"/>
+                            <constraint firstItem="oi1-Pm-19g" firstAttribute="trailing" secondItem="osX-EO-kzZ" secondAttribute="trailing" id="JTH-6F-FUW"/>
+                            <constraint firstItem="oi1-Pm-19g" firstAttribute="bottom" secondItem="osX-EO-kzZ" secondAttribute="bottom" id="n6s-YT-wyJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="osX-EO-kzZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Swift learning" id="upu-Na-Qfu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jNX-Hs-v0Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-255" y="809"/>
         </scene>
     </scenes>
     <resources>

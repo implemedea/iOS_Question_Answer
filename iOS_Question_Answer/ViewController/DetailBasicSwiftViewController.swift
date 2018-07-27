@@ -22,6 +22,7 @@ class DetailBasicSwiftViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.topItem?.title = strTopic
+        
         if let img = imgFunction{
             self.imgViewFunction.image = img
         }
