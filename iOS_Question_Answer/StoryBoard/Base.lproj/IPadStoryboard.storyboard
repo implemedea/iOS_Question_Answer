@@ -40,21 +40,35 @@
                                 </constraints>
                                 <state key="normal" title="KVC"/>
                                 <connections>
-                                    <action selector="showKVC:" destination="PMF-BQ-6ZP" eventType="touchUpInside" id="VA2-LF-dGD"/>
+                                    <action selector="showKVO:" destination="PMF-BQ-6ZP" eventType="touchUpInside" id="poP-v7-cep"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SsF-Kc-u7V">
+                                <rect key="frame" x="226" y="72" width="151" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="RqM-HF-55L"/>
+                                    <constraint firstAttribute="height" constant="21" id="ryc-FJ-CJ0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="iqc-cI-XfK" firstAttribute="top" secondItem="C82-Ar-f3m" secondAttribute="top" constant="72" id="Gdy-Mf-12Q"/>
+                            <constraint firstItem="SsF-Kc-u7V" firstAttribute="top" secondItem="C82-Ar-f3m" secondAttribute="top" constant="52" id="H26-ab-c0U"/>
+                            <constraint firstItem="SsF-Kc-u7V" firstAttribute="leading" secondItem="ia1-XD-tNn" secondAttribute="leading" id="Mos-0z-TCG"/>
                             <constraint firstItem="ia1-XD-tNn" firstAttribute="leading" secondItem="iqc-cI-XfK" secondAttribute="trailing" constant="38" id="YWr-2U-eC7"/>
                             <constraint firstItem="ia1-XD-tNn" firstAttribute="top" secondItem="C82-Ar-f3m" secondAttribute="top" constant="72" id="mU1-4G-ICr"/>
                             <constraint firstItem="iqc-cI-XfK" firstAttribute="leading" secondItem="C82-Ar-f3m" secondAttribute="leading" constant="37" id="nqa-9I-Bb6"/>
+                            <constraint firstItem="C82-Ar-f3m" firstAttribute="bottom" secondItem="SsF-Kc-u7V" secondAttribute="bottom" constant="931" id="py6-7f-ZaM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C82-Ar-f3m"/>
                     </view>
                     <connections>
                         <outlet property="btnKVC" destination="ia1-XD-tNn" id="jo5-xK-93T"/>
+                        <outlet property="lblKVO" destination="SsF-Kc-u7V" id="Bsz-uI-A9O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fvk-rL-nJR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -99,6 +113,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="wic-Pf-IWX"/>
                     <size key="freeformSize" width="300" height="300"/>
+                    <connections>
+                        <outlet property="tblViewRect" destination="CzO-jP-4jV" id="3lZ-8O-IB1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w8m-pa-PMo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

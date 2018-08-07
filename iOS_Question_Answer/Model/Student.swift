@@ -8,9 +8,13 @@
 
 import UIKit
 
+let keyPath = "progress"
+
 class Student: NSObject {
-    @objc dynamic var name: String?
+    var name: String?
     var age:Int?
+    @objc dynamic var progress: Int = 0
+    
 }
 
 class Observer: NSObject {
@@ -21,17 +25,19 @@ class Observer: NSObject {
 
         super.init()
 
-        self.student.addObserver(self, forKeyPath: "name", options: NSKeyValueObservingOptions.new, context: nil)
+        self.student.addObserver(self, forKeyPath: keyPath, options: NSKeyValueObservingOptions.new, context: nil)
     }
 
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == keyPathToObserve {
-
+        if keyPath == keyPath {
+            let student = object as! Student
+            print(student.progress)
+            NotificationCenter.default.post(name: Notification.Name("KVO"), object: object, userInfo: nil)
         }
     }
 
     deinit {
-        self.student.removeObserver(self, forKeyPath: "name")
+        self.student.removeObserver(self, forKeyPath: keyPath)
     }
 }
 

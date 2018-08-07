@@ -9,22 +9,22 @@
 import UIKit
 
 class iPadViewController: UIViewController {
-
+    @IBOutlet weak var lblKVO: UILabel!
+    
     
     @IBOutlet weak var btnKVC: UIButton!
-    let objStudent = Student()
-    
+    let student = Student()
     let storyBoardiPad:UIStoryboard = UIStoryboard.init(name: "IPadStoryboard", bundle: nil)
-  
+    var progressCounter = 0
+    var timer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let student = Student()
-        student.name = "Test"
-        
-        let observer = Observer(student: student)
-        observer.student.name = "test1"
-
+        student.name = "student 1"
+        student.age = 20
+        student.progress = 0
+        print(student.name!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,7 +50,7 @@ class iPadViewController: UIViewController {
         self.present(popVC, animated: true)
     }
     
-    @IBAction func showKVC(_ sender: Any) {
+    @IBAction func showKVO(_ sender: Any) {
         let popVC = self.storyBoardiPad.instantiateViewController(withIdentifier: "NavigationRectPop")
         popVC.modalPresentationStyle = .popover
         
@@ -64,20 +64,29 @@ class iPadViewController: UIViewController {
         popOverVC?.sourceRect = viewForSource.bounds
         popVC.preferredContentSize = CGSize(width: 250, height: 250)
         
-        objStudent.name = "test1"
-        
         self.present(popVC, animated: true)
+        
+        
+        progressCounter = 0
+        self.lblKVO.text = String(progressCounter)
+        timer.invalidate()
+        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(KVO), userInfo: nil, repeats: true)
     }
     
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == keyPathToObserve {
-            
+    @objc func KVO(){
+        let observer = Observer(student: student)
+        observer.student.name = "student 2"
+        student.age = 21
+        if(progressCounter != 10){
+            student.progress = progressCounter + 1
+            progressCounter = student.progress
+            self.lblKVO.text = String(progressCounter)
+        }else if(progressCounter == 10){
+             timer.invalidate()
         }
     }
     
-    deinit {
-        self.btnKVC.removeObserver(self, forKeyPath: keyPathToObserve, context: nil)
-    }
+   
    
 //    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
 //        return .none

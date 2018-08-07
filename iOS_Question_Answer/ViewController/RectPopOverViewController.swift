@@ -9,12 +9,19 @@
 import UIKit
 
 class RectPopOverViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-
+    
+    @IBOutlet weak var tblViewRect: UITableView!
     let aryContentList = ["1","2","3","4","5","6","7","8","9","10"]
+    var progress:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.reloadTable),
+            name: Notification.Name("KVO"),
+            object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,7 +42,7 @@ class RectPopOverViewController: UIViewController,UITableViewDelegate,UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellId:String = "RectCellId"
         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellId)!
-        cell.textLabel?.text = aryContentList[indexPath.row]
+        cell.textLabel?.text = String(self.progress)
         cell.textLabel?.numberOfLines = 0
         return cell
     }
@@ -48,6 +55,17 @@ class RectPopOverViewController: UIViewController,UITableViewDelegate,UITableVie
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+    }
+    
+    //MARK:- user defined function
+    
+    @objc func reloadTable(not: Notification){
+        let sender = not.object
+        guard let student = sender as? Student else{
+            return
+        }
+        self.progress = student.progress
+        self.tblViewRect.reloadData()
     }
 
    
