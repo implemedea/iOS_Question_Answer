@@ -13,7 +13,7 @@
     
     let kEmpty = ""
     let kAddCaseDatePlaceholder = "dd-mm-yyyy"
-    
+    let keyPathToObserve = "estimatedProgress"
 
     
 #endif

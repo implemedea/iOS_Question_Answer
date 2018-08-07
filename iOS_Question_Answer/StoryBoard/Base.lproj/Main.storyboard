@@ -141,6 +141,7 @@
                         <segue destination="7Vs-VO-7MA" kind="show" id="aeP-EL-EGy"/>
                         <segue destination="2jV-7r-1Rc" kind="show" id="AXD-AO-eUy"/>
                         <segue destination="0GX-zl-QVG" kind="show" id="0QD-Pf-ZcP"/>
+                        <segue destination="ANv-zX-f51" kind="show" id="pBM-UB-Hbc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fbr-OR-Ngr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -260,7 +261,15 @@
                 <viewControllerPlaceholder storyboardIdentifier="DeviceRotationViewController" storyboardName="LandScape" referencedIdentifier="DeviceRotationViewController" id="2jV-7r-1Rc" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HMb-ft-fuB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="633" y="775"/>
+            <point key="canvasLocation" x="322" y="492"/>
+        </scene>
+        <!--iPadViewController-->
+        <scene sceneID="t8B-cr-mjW">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="iPadViewController" storyboardName="IPadStoryboard" referencedIdentifier="iPadViewController" id="ANv-zX-f51" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rjw-kP-9Sn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="801" y="492"/>
         </scene>
         <!--Local Notification View Controller-->
         <scene sceneID="Nm8-Jg-88P">

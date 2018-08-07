@@ -15,11 +15,12 @@ enum ViewController:Int{
     case DeviceRotation = 2
     case LocalNotification = 3
     case CommonFunction = 4
+    case PopOverViewController = 5
 }
 
 class BaseViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
-    let aryContentList:Array = ["Swift concept", "NSOperation, Dispatch queue and Dispatch group", "Device rotation specfic view controller", "Local Notification", "Common Function"]
+    let aryContentList:Array = ["Swift concept", "NSOperation, Dispatch queue and Dispatch group", "Device rotation specfic view controller", "Local Notification", "Common Function", "Pop over view controller"]
     let storyBoardMain:UIStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +66,8 @@ class BaseViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             childViewController = storyBoardMain.instantiateViewController(withIdentifier: "LocalNotificationViewController")
         }else if(indexPath.row == ViewController.CommonFunction.rawValue){
             childViewController = storyBoardMain.instantiateViewController(withIdentifier: "CommonFunctionViewController")
+        }else if(indexPath.row == ViewController.PopOverViewController.rawValue){
+            childViewController = storyBoardMain.instantiateViewController(withIdentifier: "iPadViewController")
         }
         
         guard (childViewController != nil) else {
