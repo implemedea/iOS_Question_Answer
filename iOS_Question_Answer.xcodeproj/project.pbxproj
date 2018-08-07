@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB10B7252111BE5900037DFF /* IPadStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB10B7232111BE5900037DFF /* IPadStoryboard.storyboard */; };
+		FB10B7272111BF7400037DFF /* RectPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB10B7262111BF7400037DFF /* RectPopOverViewController.swift */; };
+		FB10B7292111C2BC00037DFF /* iPadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB10B7282111C2BC00037DFF /* iPadViewController.swift */; };
 		FB9E216F2109FE950065A1C6 /* CustomSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9E216E2109FE950065A1C6 /* CustomSlider.xib */; };
 		FBB5720B210B3510002F61BC /* CommonFunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB5720A210B3510002F61BC /* CommonFunctionViewController.swift */; };
 		FBB5720F210B39A8002F61BC /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB5720E210B39A8002F61BC /* GlobalConstant.swift */; };
@@ -21,6 +24,8 @@
 		FBCFDF5E21061B230081DE00 /* DeviceRotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCFDF5D21061B230081DE00 /* DeviceRotationViewController.swift */; };
 		FBCFDF6321070A6B0081DE00 /* LandScape.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBCFDF6121070A6B0081DE00 /* LandScape.storyboard */; };
 		FBCFDF65210766EC0081DE00 /* LocalNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCFDF64210766EB0081DE00 /* LocalNotificationViewController.swift */; };
+		FBE01E89211981F90053AAF1 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE01E88211981F90053AAF1 /* Student.swift */; };
+		FBE01E8B2119A0C50053AAF1 /* GlobalClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE01E8A2119A0C50053AAF1 /* GlobalClass.swift */; };
 		FBE26BB220EF8B5C0021987F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE26BB120EF8B5C0021987F /* BaseViewController.swift */; };
 		FBE26BB420EFAAAB0021987F /* NSOperationAndDispatchQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE26BB320EFAAAB0021987F /* NSOperationAndDispatchQueueViewController.swift */; };
 		FBFB51D220F4C94300CA08F3 /* DetailBasicSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFB51D120F4C94300CA08F3 /* DetailBasicSwiftViewController.swift */; };
@@ -44,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB10B7242111BE5900037DFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/IPadStoryboard.storyboard; sourceTree = "<group>"; };
+		FB10B7262111BF7400037DFF /* RectPopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectPopOverViewController.swift; sourceTree = "<group>"; };
+		FB10B7282111C2BC00037DFF /* iPadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadViewController.swift; sourceTree = "<group>"; };
 		FB9E216E2109FE950065A1C6 /* CustomSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSlider.xib; sourceTree = "<group>"; };
 		FBB5720A210B3510002F61BC /* CommonFunctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctionViewController.swift; sourceTree = "<group>"; };
 		FBB5720E210B39A8002F61BC /* GlobalConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
@@ -64,6 +72,8 @@
 		FBCFDF5D21061B230081DE00 /* DeviceRotationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRotationViewController.swift; sourceTree = "<group>"; };
 		FBCFDF6221070A6B0081DE00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LandScape.storyboard; sourceTree = "<group>"; };
 		FBCFDF64210766EB0081DE00 /* LocalNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationViewController.swift; sourceTree = "<group>"; };
+		FBE01E88211981F90053AAF1 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		FBE01E8A2119A0C50053AAF1 /* GlobalClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalClass.swift; sourceTree = "<group>"; };
 		FBE26BB120EF8B5C0021987F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FBE26BB320EFAAAB0021987F /* NSOperationAndDispatchQueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSOperationAndDispatchQueueViewController.swift; sourceTree = "<group>"; };
 		FBFB51D120F4C94300CA08F3 /* DetailBasicSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBasicSwiftViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +186,8 @@
 				FBFB51D120F4C94300CA08F3 /* DetailBasicSwiftViewController.swift */,
 				FBCFDF5D21061B230081DE00 /* DeviceRotationViewController.swift */,
 				FBB5720A210B3510002F61BC /* CommonFunctionViewController.swift */,
+				FB10B7262111BF7400037DFF /* RectPopOverViewController.swift */,
+				FB10B7282111C2BC00037DFF /* iPadViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -194,6 +206,7 @@
 				FBCFDF6121070A6B0081DE00 /* LandScape.storyboard */,
 				FBCE543B20A42E81004BCE02 /* Main.storyboard */,
 				FBCE544320A42E81004BCE02 /* LaunchScreen.storyboard */,
+				FB10B7232111BE5900037DFF /* IPadStoryboard.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -201,6 +214,7 @@
 		FBCFDF69210769750081DE00 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FBE01E88211981F90053AAF1 /* Student.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -208,6 +222,7 @@
 		FBCFDF6A2107697C0081DE00 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				FBE01E8A2119A0C50053AAF1 /* GlobalClass.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -329,6 +344,7 @@
 				FBCE544520A42E81004BCE02 /* LaunchScreen.storyboard in Resources */,
 				FBCE544220A42E81004BCE02 /* Assets.xcassets in Resources */,
 				FBCFDF6321070A6B0081DE00 /* LandScape.storyboard in Resources */,
+				FB10B7252111BE5900037DFF /* IPadStoryboard.storyboard in Resources */,
 				FB9E216F2109FE950065A1C6 /* CustomSlider.xib in Resources */,
 				FBCE543D20A42E81004BCE02 /* Main.storyboard in Resources */,
 			);
@@ -355,11 +371,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB10B7272111BF7400037DFF /* RectPopOverViewController.swift in Sources */,
 				FBCE544020A42E81004BCE02 /* iOS_Question_Answer.xcdatamodeld in Sources */,
 				FBE26BB220EF8B5C0021987F /* BaseViewController.swift in Sources */,
 				FBCFDF5E21061B230081DE00 /* DeviceRotationViewController.swift in Sources */,
+				FB10B7292111C2BC00037DFF /* iPadViewController.swift in Sources */,
 				FBFB51D220F4C94300CA08F3 /* DetailBasicSwiftViewController.swift in Sources */,
 				FBE26BB420EFAAAB0021987F /* NSOperationAndDispatchQueueViewController.swift in Sources */,
+				FBE01E8B2119A0C50053AAF1 /* GlobalClass.swift in Sources */,
+				FBE01E89211981F90053AAF1 /* Student.swift in Sources */,
 				FBB5720B210B3510002F61BC /* CommonFunctionViewController.swift in Sources */,
 				FBB5720F210B39A8002F61BC /* GlobalConstant.swift in Sources */,
 				FBCE543A20A42E81004BCE02 /* BasicSwiftViewController.swift in Sources */,
@@ -400,6 +420,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		FB10B7232111BE5900037DFF /* IPadStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB10B7242111BE5900037DFF /* Base */,
+			);
+			name = IPadStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
 		FBCE543B20A42E81004BCE02 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
