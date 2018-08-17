@@ -10,24 +10,20 @@ import UIKit
 
 let keyPath = "progress"
 
+let keyPath1 = "Student"
+
 class Student: NSObject {
     var name: String?
     var age:Int?
     @objc dynamic var progress: Int = 0
+    var updateIndex:Int?
     
-}
-
-class Observer: NSObject {
-    var student: Student
-
-    init(student: Student) {
-        self.student = student
-
+    override init() {
         super.init()
-
-        self.student.addObserver(self, forKeyPath: keyPath, options: NSKeyValueObservingOptions.new, context: nil)
+        
+        self.addObserver(self, forKeyPath: keyPath, options: NSKeyValueObservingOptions.new, context: nil)
     }
-
+   
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == keyPath {
             let student = object as! Student
@@ -35,10 +31,12 @@ class Observer: NSObject {
             NotificationCenter.default.post(name: Notification.Name("KVO"), object: object, userInfo: nil)
         }
     }
-
+    
     deinit {
-        self.student.removeObserver(self, forKeyPath: keyPath)
+        self.removeObserver(self, forKeyPath: keyPath)
     }
+
 }
+
 
 

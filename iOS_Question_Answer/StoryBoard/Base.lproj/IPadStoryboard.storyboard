@@ -38,7 +38,7 @@
                                     <constraint firstAttribute="width" constant="151" id="F2j-av-ByX"/>
                                     <constraint firstAttribute="height" constant="30" id="dTa-xg-O3Y"/>
                                 </constraints>
-                                <state key="normal" title="KVC"/>
+                                <state key="normal" title="KVO"/>
                                 <connections>
                                     <action selector="showKVO:" destination="PMF-BQ-6ZP" eventType="touchUpInside" id="poP-v7-cep"/>
                                 </connections>

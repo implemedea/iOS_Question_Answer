@@ -74,10 +74,11 @@ class iPadViewController: UIViewController {
     }
     
     @objc func KVO(){
-        let observer = Observer(student: student)
-        observer.student.name = "student 2"
+        let student = Student()
+        student.name = "student 2"
         student.age = 21
         if(progressCounter != 10){
+            student.updateIndex = 2
             student.progress = progressCounter + 1
             progressCounter = student.progress
             self.lblKVO.text = String(progressCounter)

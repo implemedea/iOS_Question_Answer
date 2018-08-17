@@ -11,7 +11,7 @@ import UIKit
 class RectPopOverViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet weak var tblViewRect: UITableView!
-    let aryContentList = ["1","2","3","4","5","6","7","8","9","10"]
+    var aryContentList = ["1","2","3","4","5","6","7","8","9","10"]
     var progress:Int = 0
     
     override func viewDidLoad() {
@@ -42,7 +42,7 @@ class RectPopOverViewController: UIViewController,UITableViewDelegate,UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellId:String = "RectCellId"
         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellId)!
-        cell.textLabel?.text = String(self.progress)
+        cell.textLabel?.text = self.aryContentList[indexPath.row]
         cell.textLabel?.numberOfLines = 0
         return cell
     }
@@ -65,7 +65,14 @@ class RectPopOverViewController: UIViewController,UITableViewDelegate,UITableVie
             return
         }
         self.progress = student.progress
-        self.tblViewRect.reloadData()
+        
+        if let index = student.updateIndex{
+            if(self.aryContentList.count > index){
+                self.aryContentList[index] = "Updated value = " + String(describing:student.progress)
+            }
+            let indexPath = IndexPath(row: student.updateIndex!, section: 0)
+            self.tblViewRect.reloadRows(at: [indexPath as IndexPath], with: UITableViewRowAnimation.none)
+        }
     }
 
    

@@ -39,7 +39,7 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        self.kvc()
     }
 
     override func didReceiveMemoryWarning() {
@@ -172,6 +172,20 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
         let (a,_,_) = tuple
         print(age, number, name, a)
         print(tuple)
+    }
+    
+    //MARK:- KVC
+    
+    func kvc(){
+        let objStudent = Student()
+        objStudent.setValue(1, forKey: "progress")
+        
+        objStudent.setValue(2, forKeyPath: "self.progress")
+        
+        objStudent.name = "test 1"
+        
+        print(objStudent.value(forKey: "progress")!)
+        print(objStudent.value(forKey: "name")!)
     }
     
     //MARK:- Trailing closure
