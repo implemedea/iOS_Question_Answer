@@ -179,14 +179,19 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
     func kvc(){
         let objStudent = Student()
         objStudent.setValue(1, forKey: "progress")
-        
         objStudent.setValue(2, forKeyPath: "self.progress")
-        
-        objStudent.name = "test 1"
-        
         print(objStudent.value(forKey: "progress")!)
-        print(objStudent.value(forKey: "name")!)
+       
+        // Key
+        objStudent.objSchool?.schoolName = "test school"
+        // KeyPath
+        objStudent.setValue("test", forKeyPath: "self.objSchool.schoolName")
+        
     }
+    
+    
+    
+    
     
     //MARK:- Trailing closure
     

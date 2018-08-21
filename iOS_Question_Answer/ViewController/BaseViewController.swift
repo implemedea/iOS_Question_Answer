@@ -74,6 +74,8 @@ class BaseViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             childViewController = storyBoardMain.instantiateViewController(withIdentifier: "iPadViewController")
         }else if(indexPath.row == ViewController.KVO.rawValue){
             childViewController = storyBoardMain.instantiateViewController(withIdentifier: "iPadViewController")
+        }else if(indexPath.row == ViewController.NSURLSession.rawValue){
+            childViewController = storyBoardMain.instantiateViewController(withIdentifier: "NSURLSessionViewController")
         }
         
         guard (childViewController != nil) else {
