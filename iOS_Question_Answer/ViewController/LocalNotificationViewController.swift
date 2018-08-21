@@ -20,6 +20,7 @@ class LocalNotificationViewController: UIViewController {
         content.categoryIdentifier = "quizCategory"
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        UNUserNotificationCenter.current().delegate = self
         
         let requestIdentifier = "africaQuiz"
         let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
