@@ -22,6 +22,7 @@ enum topic:String{
     case TrailingClosure = "Trailing Closure"
     case AutoClosure = "Auto Closure"
     case EscapeClosure = "Escaping Closure"
+    case KVC = "KVC"
     
 }
 
@@ -33,13 +34,11 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
     }()
     
     
-    let aryTopic = [topic.ifLet.rawValue,topic.guardLet.rawValue,topic.LazyProperty.rawValue,topic.tuple.rawValue,topic.HOF_sort.rawValue,topic.HOF_map.rawValue,topic.HOF_reduce.rawValue,topic.HOF_filter.rawValue,topic.Any_AnyObject.rawValue,topic.Attributed_String.rawValue,topic.TrailingClosure.rawValue,topic.AutoClosure.rawValue,topic.EscapeClosure.rawValue] as [Any]
+    let aryTopic = [topic.ifLet.rawValue,topic.guardLet.rawValue,topic.LazyProperty.rawValue,topic.tuple.rawValue,topic.HOF_sort.rawValue,topic.HOF_map.rawValue,topic.HOF_reduce.rawValue,topic.HOF_filter.rawValue,topic.Any_AnyObject.rawValue,topic.Attributed_String.rawValue,topic.TrailingClosure.rawValue,topic.AutoClosure.rawValue,topic.EscapeClosure.rawValue,topic.KVC.rawValue] as [Any]
     let storyBoardMain:UIStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.kvc()
     }
 
     override func didReceiveMemoryWarning() {
@@ -294,6 +293,8 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
                 }
             })
             
+        }else if(aryTopic[indexPath.row] as! String == topic.KVC.rawValue){
+            self.kvc()
         }
         self.navigationController?.pushViewController(childViewController, animated: true)
     }
