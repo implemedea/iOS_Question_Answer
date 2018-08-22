@@ -9,7 +9,6 @@
 import UIKit
 
 let keyPathProgress = "progress"
-
 let keyPathSchool = "objSchool.schoolName"
 
 class Student: NSObject {
@@ -30,7 +29,7 @@ class Student: NSObject {
         if keyPath == keyPathProgress {
             let student = object as! Student
             print(student.progress)
-            NotificationCenter.default.post(name: Notification.Name("KVO"), object: object, userInfo: nil)
+            NotificationCenter.default.post(name: Notification.Name(kNotificationNameKVO), object: object, userInfo: nil)
         }else if keyPath == keyPathSchool {
             let student = object as! Student
             if let schoolName = student.objSchool?.schoolName{

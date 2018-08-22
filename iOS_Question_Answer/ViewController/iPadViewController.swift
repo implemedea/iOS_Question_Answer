@@ -9,10 +9,11 @@
 import UIKit
 
 class iPadViewController: UIViewController {
+    
+    
     @IBOutlet weak var lblKVO: UILabel!
-    
-    
     @IBOutlet weak var btnKVC: UIButton!
+    
     let student = Student()
     let storyBoardiPad:UIStoryboard = UIStoryboard.init(name: "IPadStoryboard", bundle: nil)
     var progressCounter = 0
@@ -34,24 +35,15 @@ class iPadViewController: UIViewController {
     
     @objc
     @IBAction func showRectPopOver(_ sender: Any) {
-        let popVC = self.storyBoardiPad.instantiateViewController(withIdentifier: "NavigationRectPop")
-        popVC.modalPresentationStyle = .popover
-        
-        
-        let popOverVC = popVC.popoverPresentationController
-        popOverVC?.delegate = self
-        let viewForSource = sender as! UIView
-        popOverVC?.sourceView = viewForSource
-        
-        // the position of the popover where it's showed
-        popOverVC?.sourceRect = viewForSource.bounds
-        popVC.preferredContentSize = CGSize(width: 250, height: 250)
-        
-        self.present(popVC, animated: true)
+        let popVC = self.storyBoardiPad.instantiateViewController(withIdentifier: "PopoverNavigationController") as! PopoverNavigationController
+        self.addChildViewController(popVC)
+        self.view.addSubview(popVC.view)
+        popVC.didMove(toParentViewController: self)
+       
     }
     
     @IBAction func showKVO(_ sender: Any) {
-        let popVC = self.storyBoardiPad.instantiateViewController(withIdentifier: "NavigationRectPop")
+        let popVC = self.storyBoardiPad.instantiateViewController(withIdentifier: "NavigationKVO")
         popVC.modalPresentationStyle = .popover
         
         

@@ -1,24 +1,30 @@
 //
-//  RectPopOverViewController.swift
+//  KVOandKVOViewController.swift
 //  iOS_Question_Answer
 //
-//  Created by Sebastin on 8/1/18.
+//  Created by Sebastin on 8/22/18.
 //  Copyright © 2018 Sebastin. All rights reserved.
 //
 
 import UIKit
 
-class RectPopOverViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-    var isRectPopOver:Bool = false
-    
+class KVOandKVOViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+
     @IBOutlet weak var tblViewRect: UITableView!
     var aryContentList = ["1","2","3","4","5","6","7","8","9","10"]
     var progress:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.reloadTable),
+            name: Notification.Name(kNotificationNameKVO),
+            object: nil)
     }
-
+    
     
     
     override func didReceiveMemoryWarning() {
@@ -37,7 +43,7 @@ class RectPopOverViewController: UIViewController,UITableViewDelegate,UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellId:String = "RectCellId"
+        let cellId:String = "CellIdKVO"
         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellId)!
         cell.textLabel?.text = self.aryContentList[indexPath.row]
         cell.textLabel?.numberOfLines = 0
@@ -45,7 +51,7 @@ class RectPopOverViewController: UIViewController,UITableViewDelegate,UITableVie
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       
+        
         
     }
     
@@ -54,9 +60,22 @@ class RectPopOverViewController: UIViewController,UITableViewDelegate,UITableVie
         return UITableViewAutomaticDimension
     }
     
-    @IBAction func removePopOver(_ sender: Any) {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: kNotificationNameNavigation), object: nil, userInfo: nil)
+    //MARK:- user defined function
+    
+    @objc func reloadTable(not: Notification){
+        let sender = not.object
+        guard let student = sender as? Student else{
+            return
+        }
+        self.progress = student.progress
+        
+        if let index = student.updateIndex{
+            if(self.aryContentList.count > index){
+                self.aryContentList[index] = "Updated value = " + String(describing:student.progress)
+            }
+            let indexPath = IndexPath(row: student.updateIndex!, section: 0)
+            self.tblViewRect.reloadRows(at: [indexPath as IndexPath], with: UITableViewRowAnimation.none)
+        }
     }
 
-   
 }

@@ -15,5 +15,7 @@
     let kAddCaseDatePlaceholder = "dd-mm-yyyy"
     let keyPathToObserve = "estimatedProgress"
 
+    let kNotificationNameKVO = "KVO"
+    let kNotificationNameNavigation = "RemoveNavigationController"
     
 #endif
