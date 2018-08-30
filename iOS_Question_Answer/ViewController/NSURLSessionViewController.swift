@@ -172,103 +172,6 @@ class NSURLSessionViewController: UIViewController {
         task.resume()
     }
     
-    //MARK:- DataTask - DELETE call
-    
-    @IBAction func makeDataTaskDeleteCall(_ sender: Any){
-        let firstTodoEndpoint: String = "https://jsonplaceholder.typicode.com/todos/1"
-        var firstTodoUrlRequest = URLRequest(url: URL(string: firstTodoEndpoint)!)
-        firstTodoUrlRequest.httpMethod = "DELETE"
-        
-        let session = URLSession.shared
-        
-        let task = session.dataTask(with: firstTodoUrlRequest) {
-            (data, response, error) in
-            guard let _ = data else {
-                print("error calling DELETE on /todos/1")
-                return
-            }
-            print("DELETE ok")
-        }
-        task.resume()
-    }
-    
-    //MARK:- Download Task - Completion handler
-    
-    @IBAction func makeDownloadTaskWithCompletionHandler(_ sender: Any) {
-        let url = URL(string: "http://www.pdf995.com/samples/pdf.pdf")!
-        let task = URLSession.shared.downloadTask(with: url) { localURL, urlResponse, error in
-            if let localURL = localURL {
-                GlobalClass.shared.createFileFromTemp(location: localURL)
-            }
-        }
-        task.resume()
-    }
-    
-    //MARK:- Download Task - Delegate method
-    
-    @IBAction func makeDownloadTaskWithDelegate(_ sender: Any) {
-        let url = URL(string: "https://scholar.princeton.edu/sites/default/files/oversize_pdf_test_0.pdf")!
-        let task = DownloadManager.shared.activate().downloadTask(with: url)
-        task.resume()
-    }
-    
-    func upload(request: URLRequest, data: Data)
-    {
-        // Create a unique identifier for the session.
-        let sessionIdentifier = NSUUID().uuidString
-        
-        
-        let directoryURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!
-        let fileURL = directoryURL.appendingPathComponent(sessionIdentifier)
-        
-        // Write data to cache file.
-//        data.write(to: fileURL, options: true);
-        do{
-            try data.write(to: fileURL, options: .atomic)
-        }catch{
-            
-        }
-        
-        
-//        let configuration = URLSessionConfiguration.background(withIdentifier: sessionIdentifier)
-//
-//        let session: URLSession = URLSession(
-//            configuration:configuration,
-//            delegate: self as? URLSessionDelegate,
-//            delegateQueue: OperationQueue.main
-//        )
-        
-        // Store the session, so that we don't recreate it if app resumes from suspend.
-//        sessions[sessionIdentifier] = session
-        
-        let task = DownloadManager.shared.activate().uploadTask(with: request as URLRequest, fromFile: fileURL)
-         task.resume()
-        
-//        let task2 = session.uploadTask(with: request, fromFile: fileURL) { (data, response, error) in
-//            if let res = response{
-//                print("response = ",res)
-//            }
-//            if let err = error{
-//                print("err = ",err)
-//            }
-//        }
-//
-//        task2.resume()
-        
-//        let task1 = session.uploadTask(with: request as URLRequest, from: data as Data) { (data, response, error) in
-//            if let res = response{
-//                  print("response = ",res)
-//            }
-//            if let err = error{
-//                print("err = ",err)
-//            }
-//
-//        }
-//        task1.resume()
-        
-       
-    }
-
     func getPriceList() {
         dispatchGroup.enter()
         let params: NSDictionary = [kKeyApiKey: kApiKey, kAffId: kAffIdValue, kKeyAct: kgetPhotoProducts, kKeyPrdGrpId: kEmpty, kKeyDevInf: kDevinf, kKeyAppVer: kAppver]
@@ -276,7 +179,7 @@ class NSURLSessionViewController: UIViewController {
         let url:String = kBaseURL + kPhotoURL
         
         print("getPriceList url = \(url)")
-    
+        
         let todosEndpoint: String = url
         guard let todosURL = URL(string: todosEndpoint) else {
             print("Error: cannot create URL")
@@ -313,9 +216,9 @@ class NSURLSessionViewController: UIViewController {
             // parse the result as JSON, since that's what the API provides
             do {
                 guard let json = try JSONSerialization.jsonObject(with: responseData,
-                                                                          options: []) as? [String: Any] else {
-                                                                            print("Could not get JSON from responseData as dictionary")
-                                                                            return
+                                                                  options: []) as? [String: Any] else {
+                                                                    print("Could not get JSON from responseData as dictionary")
+                                                                    return
                 }
                 
                 let jsonDict:NSDictionary = json as NSDictionary
@@ -412,7 +315,50 @@ class NSURLSessionViewController: UIViewController {
         task.resume()
     }
     
-    //MARK:- upload task
+    //MARK:- DataTask - DELETE call
+    
+    @IBAction func makeDataTaskDeleteCall(_ sender: Any){
+        let firstTodoEndpoint: String = "https://jsonplaceholder.typicode.com/todos/1"
+        var firstTodoUrlRequest = URLRequest(url: URL(string: firstTodoEndpoint)!)
+        firstTodoUrlRequest.httpMethod = "DELETE"
+        
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: firstTodoUrlRequest) {
+            (data, response, error) in
+            guard let _ = data else {
+                print("error calling DELETE on /todos/1")
+                return
+            }
+            print("DELETE ok")
+        }
+        task.resume()
+    }
+    
+    //MARK:- Download Task - Completion handler
+    
+    @IBAction func makeDownloadTaskWithCompletionHandler(_ sender: Any) {
+        let url = URL(string: "http://www.pdf995.com/samples/pdf.pdf")!
+        let task = URLSession.shared.downloadTask(with: url) { localURL, urlResponse, error in
+            if let localURL = localURL {
+                GlobalClass.shared.createFileFromTemp(location: localURL)
+            }
+        }
+        task.resume()
+    }
+    
+    //MARK:- Download Task - Delegate method
+    
+    @IBAction func makeDownloadTaskWithDelegate(_ sender: Any) {
+        let url = URL(string: "https://scholar.princeton.edu/sites/default/files/oversize_pdf_test_0.pdf")!
+        let task = DownloadManager.shared.activate().downloadTask(with: url)
+        task.resume()
+    }
+    
+   
+  
+    
+    //MARK:- upload task - Single image upload
     
     @IBAction func uploadTask(_ sender: Any){
 
@@ -460,6 +406,29 @@ class NSURLSessionViewController: UIViewController {
         self.upload(request: request, data: image_data)
     }
     
+    func upload(request: URLRequest, data: Data)
+    {
+        // Create a unique identifier for the session.
+        let sessionIdentifier = NSUUID().uuidString
+        
+        
+        let directoryURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!
+        let fileURL = directoryURL.appendingPathComponent(sessionIdentifier)
+        
+        // Write data to cache file.
+        
+        do{
+            try data.write(to: fileURL, options: .atomic)
+        }catch{
+            
+        }
+        
+        let task = DownloadManager.shared.activate().uploadTask(with: request as URLRequest, fromFile: fileURL)
+        task.resume()
+    }
+
+    
+    //MARK:- upload task - Multy image upload
     
     @IBAction func UploadMultipleImages(_ sender: Any){
         self.getPriceList()
