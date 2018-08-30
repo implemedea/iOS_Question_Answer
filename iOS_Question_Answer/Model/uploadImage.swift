@@ -12,4 +12,5 @@ class uploadImage: NSObject {
     var imageInfo = [NSObject : AnyObject]()
     var image: UIImage!
     var progress: Float = 0.0
+    var fileName:String?
 }

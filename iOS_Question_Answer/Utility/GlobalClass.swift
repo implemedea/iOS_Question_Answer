@@ -355,4 +355,27 @@ class GlobalClass: NSObject {
         return false
     }
     
+    //MARK:- Downaload Image
+    func getDownloadImageURL(filename:String, securityToken:String, awsSecretAccessKey:String, awsAccessKeyId:String) {
+        let ctrlUploadImgHandler = UploadPhotoAPIHandler ()
+        let returnURL: String? = ctrlUploadImgHandler.generateFinalURL(filename, url:kImageUploadURL, sessionID: securityToken, secretKey:awsSecretAccessKey, accessKeyId:awsAccessKeyId)
+        
+        if returnURL != nil {
+            print("URL String : \n \("http://" + returnURL!)")
+            getDataFromUrl(url: URL(string: "http://" + returnURL!)!) { data, response, error in
+                guard let tempData = data, error == nil else { return }
+                if let _:UIImage = UIImage(data: tempData){
+                    print("Image uploaded successfully")
+                }
+            }
+        }
+    }
+    
+    //MARK:- Image data download
+    func getDataFromUrl(url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            completion(data, response, error)
+            }.resume()
+    }
+    
 }

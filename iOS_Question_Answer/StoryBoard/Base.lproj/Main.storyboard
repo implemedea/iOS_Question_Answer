@@ -246,7 +246,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fp4-Qi-1w9">
-                                <rect key="frame" x="10" y="74" width="355" height="210"/>
+                                <rect key="frame" x="10" y="74" width="355" height="240"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kuj-UU-ryz">
                                         <rect key="frame" x="116" y="0.0" width="123" height="30"/>
@@ -276,26 +276,33 @@
                                             <action selector="makeDownloadTaskWithCompletionHandler:" destination="bmE-D3-H6f" eventType="touchUpInside" id="cpd-s8-Acb"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VG0-8n-VS3">
-                                        <rect key="frame" x="74" y="120" width="207" height="30"/>
-                                        <state key="normal" title="Upload Task - Multiple images"/>
-                                        <connections>
-                                            <action selector="UploadMultipleImages:" destination="bmE-D3-H6f" eventType="touchUpInside" id="XwU-CH-P82"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVh-TC-f3f">
-                                        <rect key="frame" x="77.5" y="150" width="200" height="30"/>
+                                        <rect key="frame" x="77.5" y="120" width="200" height="30"/>
                                         <state key="normal" title="Download Task with delegate"/>
                                         <connections>
                                             <action selector="makeDownloadTaskWithDelegate:" destination="bmE-D3-H6f" eventType="touchUpInside" id="dmG-9h-wh6"/>
                                         </connections>
                                     </button>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9qC-br-zA7">
-                                        <rect key="frame" x="10" y="180" width="335" height="30"/>
+                                        <rect key="frame" x="10" y="150" width="335" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Qas-pq-SI8"/>
                                         </constraints>
                                     </progressView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VG0-8n-VS3">
+                                        <rect key="frame" x="74" y="180" width="207" height="30"/>
+                                        <state key="normal" title="Upload Task - Multiple images"/>
+                                        <connections>
+                                            <action selector="UploadMultipleImages:" destination="bmE-D3-H6f" eventType="touchUpInside" id="XwU-CH-P82"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ah-d8-QCE">
+                                        <rect key="frame" x="80" y="210" width="195" height="30"/>
+                                        <state key="normal" title="Upload Task - SIngle images"/>
+                                        <connections>
+                                            <action selector="uploadTask:" destination="bmE-D3-H6f" eventType="touchUpInside" id="qY7-m2-Nsg"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="9qC-br-zA7" secondAttribute="trailing" constant="10" id="PRQ-AI-tIr"/>

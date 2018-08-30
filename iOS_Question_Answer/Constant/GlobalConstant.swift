@@ -53,6 +53,8 @@
     let kSecretKey:String = "secretKey"
     let kAccessKeyId:String = "accessKeyId"
     
+    let uploadImageName:String = "ary_HOF_sort.jpg"
+    
     
     // URL
     let kBaseURL: String = "https://services-qa.walgreens.com/api"

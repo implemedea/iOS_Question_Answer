@@ -21,23 +21,22 @@ class NSURLSessionViewController: UIViewController {
     
     var sessions = [String: URLSession]()
     let dispatchGroup = DispatchGroup()
+    let dispatchGroupImagesUploaded = DispatchGroup()
 
     @IBOutlet weak var progressDownloadTaskDelegate: UIProgressView!
     @IBOutlet weak var progressDownloadTaskCompletionHandler: UIProgressView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let aryImages = ["any&anyobject","ary_HOF_filter"]
+        let aryImages = ["ary_HOF_map","ary_HOF_filter"]
         for (_, element) in aryImages.enumerated(){
+            let filename = element+".jpg"
             let objUploadImages = uploadImage()
             objUploadImages.image = UIImage(named:element)
             objUploadImages.progress = 0
+            objUploadImages.fileName = filename
             self.aryUploadImages.append(objUploadImages)
         }
-
-
         let _ = DownloadManager.shared.activate()
-        
-       
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -115,11 +114,7 @@ class NSURLSessionViewController: UIViewController {
         task.resume()
     }
     
-    func getDataFromUrl(url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            completion(data, response, error)
-            }.resume()
-    }
+    
     
     //MARK:- DataTask - POST call
     
@@ -419,7 +414,7 @@ class NSURLSessionViewController: UIViewController {
     
     //MARK:- upload task
     
-    func uploadTask(){
+    @IBAction func uploadTask(_ sender: Any){
 
         let contentType: String = "image/jpg"
         
@@ -431,7 +426,7 @@ class NSURLSessionViewController: UIViewController {
         
         let ctrlUploadImgHandler = UploadPhotoAPIHandler ()
         
-        let filename = "Image_\(GlobalClass.shared.affId)_\(ctrlUploadImgHandler.getExpiryTime()).jpg"
+        let filename = uploadImageName
         
         
         let urlStr: String = "http://\(kImageUploadURL)/\(filename)"
@@ -442,7 +437,7 @@ class NSURLSessionViewController: UIViewController {
         var request = URLRequest(url: url! as URL)
         request.httpMethod = kHTTPType
         
-        let image: UIImage? = UIImage(named: "correct")
+        let image: UIImage? = UIImage(named: "ary_HOF_sort")
         let image_data = UIImageJPEGRepresentation(image!, 0.3)!
         let body = NSMutableData()
         
@@ -472,12 +467,19 @@ class NSURLSessionViewController: UIViewController {
         
         dispatchGroup.notify(queue: DispatchQueue.main) {
             self.uploadMultiImages()
+            self.dispatchGroupImagesUploaded.notify(queue: DispatchQueue.main) {
+                for(_,element) in self.aryUploadImages.enumerated(){
+                    let objUploadImages = element
+                    let filename = objUploadImages.fileName!
+                    GlobalClass.shared.getDownloadImageURL(filename: filename, securityToken: GlobalClass.shared.sessionId, awsSecretAccessKey: GlobalClass.shared.secretKey, awsAccessKeyId: GlobalClass.shared.accessKeyId)
+                }
+            }
         }
     }
     
     func uploadMultiImages(){
         (self.aryUploadImages as NSArray).enumerateObjects({ obj, idx, stop in
-            
+            dispatchGroupImagesUploaded.enter()
             let ctrlUploadImage: uploadImage? = (obj as? uploadImage)
             
             
@@ -491,10 +493,10 @@ class NSURLSessionViewController: UIViewController {
             
             let ctrlUploadImgHandler = UploadPhotoAPIHandler ()
             
-            let filename = "Image_\(GlobalClass.shared.affId)_\(ctrlUploadImgHandler.getExpiryTime()).jpg"
+            let filename = ctrlUploadImage?.fileName!
             
             
-            let urlStr: String = "http://\(kImageUploadURL)/\(filename)"
+            let urlStr: String = "http://\(kImageUploadURL)/\(String(describing: filename!))"
             
             
             let url = URL(string: urlStr)
@@ -517,7 +519,7 @@ class NSURLSessionViewController: UIViewController {
             request.addValue(contentType, forHTTPHeaderField: kContentType)
             request.addValue(self.securityToken, forHTTPHeaderField: kSecurityToken)
             
-            let auth = ctrlUploadImgHandler.generateUploadAuth(filename, url: kImageUploadURL, sessionID: self.securityToken, secretKey: self.awsSecretAccessKey, accessKeyId: self.awsAccessKeyId)
+            let auth = ctrlUploadImgHandler.generateUploadAuth(filename!, url: kImageUploadURL, sessionID: self.securityToken, secretKey: self.awsSecretAccessKey, accessKeyId: self.awsAccessKeyId)
             request.addValue(auth, forHTTPHeaderField: kAuthorization)
             
             
@@ -530,28 +532,13 @@ class NSURLSessionViewController: UIViewController {
                     
                     let res: HTTPURLResponse? = (response as? HTTPURLResponse)
                     print("~~~~~ Status code: \(Int((res?.statusCode)!)) \n ===\(String(describing: res?.allHeaderFields))~~~~~~~res:\(String(describing: res))~~~~~~``error:\(String(describing: error))")
-                    self.getDownloadImageURL(filename, image: (ctrlUploadImage?.image)!)
                 }
+                self.dispatchGroupImagesUploaded.leave()
                 
             })
             afnet.resume()
         })
     }
     
-    func getDownloadImageURL(_ filename: String, image img: UIImage) {
-        let ctrlUploadImgHandler = UploadPhotoAPIHandler ()
-        let returnURL: String? = ctrlUploadImgHandler.generateFinalURL(filename, url:kImageUploadURL, sessionID: self.securityToken, secretKey:self.awsSecretAccessKey, accessKeyId:self.awsAccessKeyId)
-        
-        if returnURL != nil {
-            print("URL String : \n \("http://" + returnURL!)")
-            getDataFromUrl(url: URL(string: "http://" + returnURL!)!) { data, response, error in
-                guard let data = data, error == nil else { return }
-                print("Download Finished")
-                let image:UIImage? = UIImage(data: data)!
-                if(image != nil){
-                    print("Image uploaded successfully")
-                }
-            }
-        }
-    }
+    
 }
