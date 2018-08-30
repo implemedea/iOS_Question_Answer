@@ -8,12 +8,18 @@
 
 import UIKit
 
+enum imageDownloadType:Int{
+    case SingleImage = 0
+    case MultyImage = 1
+}
+
 class NSURLSessionViewController: UIViewController {
     
     var awsAccessKeyId: String = kEmpty
     var awsSecretAccessKey: String = kEmpty
     var securityToken: String = kEmpty
     var aryUploadImages:[uploadImage] = []
+    var imageUpload:Int = imageDownloadType.SingleImage.rawValue
     
     typealias CompletionHandler = () -> Void
     
@@ -311,6 +317,14 @@ class NSURLSessionViewController: UIViewController {
                 
                 print("\(error.localizedDescription)")
             }
+            
+        }
+        self.dispatchGroup.notify(queue: DispatchQueue.main) {
+            if(self.imageUpload == imageDownloadType.SingleImage.rawValue){
+                self.uploadSingleImage()
+            }else{
+                self.uploadMultiImages()
+            }
         }
         task.resume()
     }
@@ -361,7 +375,16 @@ class NSURLSessionViewController: UIViewController {
     //MARK:- upload task - Single image upload
     
     @IBAction func uploadTask(_ sender: Any){
-
+        self.imageUpload = imageDownloadType.SingleImage.rawValue
+        if(GlobalClass.shared.sessionId != kEmpty && GlobalClass.shared.secretKey != kEmpty && GlobalClass.shared.accessKeyId != kEmpty){
+           self.uploadSingleImage()
+        }else{
+            self.getPriceList()
+            self.getSessionCredential()
+        }
+    }
+    
+    func uploadSingleImage(){
         let contentType: String = "image/jpg"
         
         let tz = NSTimeZone(name: kTimeZoneType)
@@ -398,7 +421,7 @@ class NSURLSessionViewController: UIViewController {
         request.addValue(contentType, forHTTPHeaderField: kContentType)
         request.addValue(self.securityToken, forHTTPHeaderField: kSecurityToken)
         
-              
+        
         
         let auth = ctrlUploadImgHandler.generateUploadAuth(filename, url: kImageUploadURL, sessionID: self.securityToken, secretKey: self.awsSecretAccessKey, accessKeyId: self.awsAccessKeyId)
         request.addValue(auth, forHTTPHeaderField: kAuthorization)
@@ -431,18 +454,12 @@ class NSURLSessionViewController: UIViewController {
     //MARK:- upload task - Multy image upload
     
     @IBAction func UploadMultipleImages(_ sender: Any){
-        self.getPriceList()
-        self.getSessionCredential()
-        
-        dispatchGroup.notify(queue: DispatchQueue.main) {
+        self.imageUpload = imageDownloadType.MultyImage.rawValue
+        if(GlobalClass.shared.sessionId != kEmpty && GlobalClass.shared.secretKey != kEmpty && GlobalClass.shared.accessKeyId != kEmpty){
             self.uploadMultiImages()
-            self.dispatchGroupImagesUploaded.notify(queue: DispatchQueue.main) {
-                for(_,element) in self.aryUploadImages.enumerated(){
-                    let objUploadImages = element
-                    let filename = objUploadImages.fileName!
-                    GlobalClass.shared.getDownloadImageURL(filename: filename, securityToken: GlobalClass.shared.sessionId, awsSecretAccessKey: GlobalClass.shared.secretKey, awsAccessKeyId: GlobalClass.shared.accessKeyId)
-                }
-            }
+        }else{
+            self.getPriceList()
+            self.getSessionCredential()
         }
     }
     
@@ -507,6 +524,13 @@ class NSURLSessionViewController: UIViewController {
             })
             afnet.resume()
         })
+        self.dispatchGroupImagesUploaded.notify(queue: DispatchQueue.main) {
+            for(_,element) in self.aryUploadImages.enumerated(){
+                let objUploadImages = element
+                let filename = objUploadImages.fileName!
+                GlobalClass.shared.getDownloadImageURL(filename: filename, securityToken: GlobalClass.shared.sessionId, awsSecretAccessKey: GlobalClass.shared.secretKey, awsAccessKeyId: GlobalClass.shared.accessKeyId)
+            }
+        }
     }
     
     
