@@ -71,6 +71,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //self.saveContext()
     }
     
+    func application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Void) {
+        debugPrint("handleEventsForBackgroundURLSession: \(identifier)")
+        completionHandler()
+    }
+    
+    
     //MARK:- Device rotation
     
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask{

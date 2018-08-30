@@ -246,38 +246,62 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fp4-Qi-1w9">
-                                <rect key="frame" x="10" y="74" width="355" height="393"/>
+                                <rect key="frame" x="10" y="74" width="355" height="210"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kuj-UU-ryz">
-                                        <rect key="frame" x="116" y="0.0" width="123" height="78.5"/>
+                                        <rect key="frame" x="116" y="0.0" width="123" height="30"/>
                                         <state key="normal" title="DataTask GET call"/>
                                         <connections>
                                             <action selector="makeDataTaskGetCall:" destination="bmE-D3-H6f" eventType="touchUpInside" id="Vc1-ob-uuB"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjU-N0-Ywy">
-                                        <rect key="frame" x="111" y="78.5" width="133" height="78.5"/>
+                                        <rect key="frame" x="111" y="30" width="133" height="30"/>
                                         <state key="normal" title="DataTask POST call"/>
                                         <connections>
                                             <action selector="makeDataTaskPostCall:" destination="bmE-D3-H6f" eventType="touchUpInside" id="m4M-Wz-5Ew"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NN8-mx-JPk">
-                                        <rect key="frame" x="103.5" y="157" width="148" height="79"/>
+                                        <rect key="frame" x="103.5" y="60" width="148" height="30"/>
                                         <state key="normal" title="DataTask DELETE call"/>
                                         <connections>
                                             <action selector="makeDataTaskDeleteCall:" destination="bmE-D3-H6f" eventType="touchUpInside" id="HX4-Vj-FTQ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLH-Mv-32u">
-                                        <rect key="frame" x="125.5" y="236" width="104" height="78.5"/>
-                                        <state key="normal" title="Download Task"/>
+                                        <rect key="frame" x="41.5" y="90" width="272" height="30"/>
+                                        <state key="normal" title="Download Task with completion handler"/>
+                                        <connections>
+                                            <action selector="makeDownloadTaskWithCompletionHandler:" destination="bmE-D3-H6f" eventType="touchUpInside" id="cpd-s8-Acb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VG0-8n-VS3">
-                                        <rect key="frame" x="135" y="314.5" width="85" height="78.5"/>
-                                        <state key="normal" title="Upload Task"/>
+                                        <rect key="frame" x="74" y="120" width="207" height="30"/>
+                                        <state key="normal" title="Upload Task - Multiple images"/>
+                                        <connections>
+                                            <action selector="UploadMultipleImages:" destination="bmE-D3-H6f" eventType="touchUpInside" id="XwU-CH-P82"/>
+                                        </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVh-TC-f3f">
+                                        <rect key="frame" x="77.5" y="150" width="200" height="30"/>
+                                        <state key="normal" title="Download Task with delegate"/>
+                                        <connections>
+                                            <action selector="makeDownloadTaskWithDelegate:" destination="bmE-D3-H6f" eventType="touchUpInside" id="dmG-9h-wh6"/>
+                                        </connections>
+                                    </button>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9qC-br-zA7">
+                                        <rect key="frame" x="10" y="180" width="335" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Qas-pq-SI8"/>
+                                        </constraints>
+                                    </progressView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9qC-br-zA7" secondAttribute="trailing" constant="10" id="PRQ-AI-tIr"/>
+                                    <constraint firstItem="9qC-br-zA7" firstAttribute="top" secondItem="hVh-TC-f3f" secondAttribute="bottom" id="UeX-o6-pd2"/>
+                                    <constraint firstItem="9qC-br-zA7" firstAttribute="leading" secondItem="fp4-Qi-1w9" secondAttribute="leading" constant="10" id="ryR-jl-Mza"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -289,6 +313,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="waa-pX-7fg"/>
                     </view>
+                    <connections>
+                        <outlet property="progressDownloadTaskDelegate" destination="9qC-br-zA7" id="FU9-TG-9Q5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A0K-K3-ccl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
