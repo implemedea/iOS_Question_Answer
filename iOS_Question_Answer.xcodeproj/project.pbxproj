@@ -17,6 +17,10 @@
 		FB9E216F2109FE950065A1C6 /* CustomSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9E216E2109FE950065A1C6 /* CustomSlider.xib */; };
 		FBAD52C721380DB6000ED29B /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBAD52BA21380D88000ED29B /* AFNetworking.framework */; };
 		FBAD52C821380DB6000ED29B /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FBAD52BA21380D88000ED29B /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FBAD52CE21394C34000ED29B /* Constraint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBAD52CC21394C34000ED29B /* Constraint.storyboard */; };
+		FBAD52D621395103000ED29B /* ConstraintListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD52D521395103000ED29B /* ConstraintListViewController.swift */; };
+		FBAD52D82139517B000ED29B /* ProportionalConstraintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD52D72139517B000ED29B /* ProportionalConstraintViewController.swift */; };
+		FBAD52E321396E9E000ED29B /* ProportionalHorizontalConstraintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD52E221396E9E000ED29B /* ProportionalHorizontalConstraintViewController.swift */; };
 		FBB5720B210B3510002F61BC /* CommonFunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB5720A210B3510002F61BC /* CommonFunctionViewController.swift */; };
 		FBB5720F210B39A8002F61BC /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB5720E210B39A8002F61BC /* GlobalConstant.swift */; };
 		FBC9E4FB212C1EF300841A1D /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9E4FA212C1EF300841A1D /* School.swift */; };
@@ -147,6 +151,10 @@
 		FB130BEC2125C2FD003A06A3 /* NSURLSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSURLSessionViewController.swift; sourceTree = "<group>"; };
 		FB9E216E2109FE950065A1C6 /* CustomSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSlider.xib; sourceTree = "<group>"; };
 		FBAD52AF21380D88000ED29B /* AFNetworking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AFNetworking.xcodeproj; path = "iOS_Question_Answer/ThirdParty/AFNetworking-master/AFNetworking.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		FBAD52CD21394C34000ED29B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Constraint.storyboard; sourceTree = "<group>"; };
+		FBAD52D521395103000ED29B /* ConstraintListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintListViewController.swift; sourceTree = "<group>"; };
+		FBAD52D72139517B000ED29B /* ProportionalConstraintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProportionalConstraintViewController.swift; sourceTree = "<group>"; };
+		FBAD52E221396E9E000ED29B /* ProportionalHorizontalConstraintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProportionalHorizontalConstraintViewController.swift; sourceTree = "<group>"; };
 		FBB5720A210B3510002F61BC /* CommonFunctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctionViewController.swift; sourceTree = "<group>"; };
 		FBB5720E210B39A8002F61BC /* GlobalConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
 		FBC9E4FA212C1EF300841A1D /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
@@ -266,6 +274,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		FBAD52DB21396E71000ED29B /* Constraints */ = {
+			isa = PBXGroup;
+			children = (
+				FBAD52D521395103000ED29B /* ConstraintListViewController.swift */,
+				FBAD52D72139517B000ED29B /* ProportionalConstraintViewController.swift */,
+				FBAD52E221396E9E000ED29B /* ProportionalHorizontalConstraintViewController.swift */,
+			);
+			path = Constraints;
+			sourceTree = "<group>";
+		};
 		FBB5720D210B3976002F61BC /* Constant */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +355,7 @@
 		FBCFDF66210769220081DE00 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FBAD52DB21396E71000ED29B /* Constraints */,
 				FBCFDF64210766EB0081DE00 /* LocalNotificationViewController.swift */,
 				FBCE543920A42E81004BCE02 /* BasicSwiftViewController.swift */,
 				FBE26BB120EF8B5C0021987F /* BaseViewController.swift */,
@@ -368,6 +387,7 @@
 				FBCE543B20A42E81004BCE02 /* Main.storyboard */,
 				FBCE544320A42E81004BCE02 /* LaunchScreen.storyboard */,
 				FB10B7232111BE5900037DFF /* IPadStoryboard.storyboard */,
+				FBAD52CC21394C34000ED29B /* Constraint.storyboard */,
 			);
 			path = StoryBoard;
 			sourceTree = "<group>";
@@ -592,6 +612,7 @@
 				FBCE544520A42E81004BCE02 /* LaunchScreen.storyboard in Resources */,
 				FBCE544220A42E81004BCE02 /* Assets.xcassets in Resources */,
 				FBCFDF6321070A6B0081DE00 /* LandScape.storyboard in Resources */,
+				FBAD52CE21394C34000ED29B /* Constraint.storyboard in Resources */,
 				FB10B7252111BE5900037DFF /* IPadStoryboard.storyboard in Resources */,
 				FB9E216F2109FE950065A1C6 /* CustomSlider.xib in Resources */,
 				FBCE543D20A42E81004BCE02 /* Main.storyboard in Resources */,
@@ -696,9 +717,12 @@
 			files = (
 				FB10B7272111BF7400037DFF /* RectPopOverViewController.swift in Sources */,
 				FBF4F4572138094000BC1A4A /* BackgroundSessionManager.m in Sources */,
+				FBAD52D82139517B000ED29B /* ProportionalConstraintViewController.swift in Sources */,
 				FBCE544020A42E81004BCE02 /* iOS_Question_Answer.xcdatamodeld in Sources */,
+				FBAD52E321396E9E000ED29B /* ProportionalHorizontalConstraintViewController.swift in Sources */,
 				FBCB821D2136A3FA002600CE /* uploadImage.swift in Sources */,
 				FBC9E500212D46C100841A1D /* KVOandKVOViewController.swift in Sources */,
+				FBAD52D621395103000ED29B /* ConstraintListViewController.swift in Sources */,
 				FBE26BB220EF8B5C0021987F /* BaseViewController.swift in Sources */,
 				FBCFDF5E21061B230081DE00 /* DeviceRotationViewController.swift in Sources */,
 				FB10B7292111C2BC00037DFF /* iPadViewController.swift in Sources */,
@@ -762,6 +786,14 @@
 				FB10B7242111BE5900037DFF /* Base */,
 			);
 			name = IPadStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		FBAD52CC21394C34000ED29B /* Constraint.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FBAD52CD21394C34000ED29B /* Base */,
+			);
+			name = Constraint.storyboard;
 			sourceTree = "<group>";
 		};
 		FBCE543B20A42E81004BCE02 /* Main.storyboard */ = {
