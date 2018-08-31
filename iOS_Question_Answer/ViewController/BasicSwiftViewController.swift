@@ -35,6 +35,7 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
     
     
     let aryTopic = [topic.ifLet.rawValue,topic.guardLet.rawValue,topic.LazyProperty.rawValue,topic.tuple.rawValue,topic.HOF_sort.rawValue,topic.HOF_map.rawValue,topic.HOF_reduce.rawValue,topic.HOF_filter.rawValue,topic.Any_AnyObject.rawValue,topic.Attributed_String.rawValue,topic.TrailingClosure.rawValue,topic.AutoClosure.rawValue,topic.EscapeClosure.rawValue,topic.KVC.rawValue] as [Any]
+   
     let storyBoardMain:UIStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
 
     override func viewDidLoad() {

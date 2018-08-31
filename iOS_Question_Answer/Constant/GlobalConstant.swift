@@ -61,4 +61,9 @@
     let kPhotoURL: String = "/photo/products/v3"
     let kSessionURL: String = "/util/mweb5url"
     
+    // View controller identifier
+    
+    let kConstraintVertical:String = "ProportionalConstraintViewController"
+    let kConstraintHorizontal:String = "ProportionalHorizontalConstraintViewController"
+    
 #endif
