@@ -10,6 +10,15 @@ import UIKit
 
 class ProportionalConstraintViewController: UIViewController {
 
+    public var RotateDevice:Bool = false
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if(RotateDevice){
+            AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)
+        }
+        super.viewDidDisappear(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

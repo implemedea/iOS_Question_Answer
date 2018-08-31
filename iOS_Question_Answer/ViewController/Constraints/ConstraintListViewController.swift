@@ -11,7 +11,7 @@ import UIKit
 enum ConsraintType:String{
     case ProportionalConstraint = "Distribute proportional height"
     case ProportionalHorizontalConstraint = "Distribute proportional width and height"
-    
+    case Variation = "Font variation"
 }
 
 class ConstraintListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -21,7 +21,7 @@ class ConstraintListViewController: UIViewController, UITableViewDelegate, UITab
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.aryConstraintType = [ConsraintType.ProportionalConstraint.rawValue, ConsraintType.ProportionalHorizontalConstraint.rawValue]
+        self.aryConstraintType = [ConsraintType.ProportionalConstraint.rawValue, ConsraintType.ProportionalHorizontalConstraint.rawValue, ConsraintType.Variation.rawValue]
        
     }
 
@@ -53,9 +53,18 @@ class ConstraintListViewController: UIViewController, UITableViewDelegate, UITab
         var childViewController:UIViewController? = nil
         
         if(aryConstraintType[indexPath.row] == ConsraintType.ProportionalConstraint.rawValue){
-            childViewController = storyBoardConstraint.instantiateViewController(withIdentifier: kConstraintVertical) as? ProportionalConstraintViewController
+            let ConstraintVC = storyBoardConstraint.instantiateViewController(withIdentifier: kConstraintVertical) as? ProportionalConstraintViewController
+            ConstraintVC?.RotateDevice = false
+            self.navigationController?.pushViewController(ConstraintVC!, animated: true)
+            return
         }else if(aryConstraintType[indexPath.row] == ConsraintType.ProportionalHorizontalConstraint.rawValue){
             childViewController = storyBoardConstraint.instantiateViewController(withIdentifier: kConstraintHorizontal) as? ProportionalHorizontalConstraintViewController
+        }else if(aryConstraintType[indexPath.row] == ConsraintType.Variation.rawValue){
+           let ConstraintVC = storyBoardConstraint.instantiateViewController(withIdentifier: kConstraintVertical) as? ProportionalConstraintViewController
+            ConstraintVC?.RotateDevice = true
+            AppUtility.lockOrientation(.landscape, andRotateTo: .landscapeLeft)
+            self.navigationController?.pushViewController(ConstraintVC!, animated: true)
+            return
         }
         
         guard (childViewController != nil) else {
