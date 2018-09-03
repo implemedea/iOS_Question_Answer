@@ -65,5 +65,6 @@
     
     let kConstraintVertical:String = "ProportionalConstraintViewController"
     let kConstraintHorizontal:String = "ProportionalHorizontalConstraintViewController"
+    let kVaryForTraitsViewController:String = "VaryForTraitsViewController"
     
 #endif

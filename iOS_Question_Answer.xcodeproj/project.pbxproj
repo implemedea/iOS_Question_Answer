@@ -14,6 +14,7 @@
 		FB10B7272111BF7400037DFF /* RectPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB10B7262111BF7400037DFF /* RectPopOverViewController.swift */; };
 		FB10B7292111C2BC00037DFF /* iPadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB10B7282111C2BC00037DFF /* iPadViewController.swift */; };
 		FB130BED2125C2FD003A06A3 /* NSURLSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB130BEC2125C2FD003A06A3 /* NSURLSessionViewController.swift */; };
+		FB76D31E213D7DAA003EBDBB /* VaryForTraitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB76D31D213D7DAA003EBDBB /* VaryForTraitsViewController.swift */; };
 		FB9E216F2109FE950065A1C6 /* CustomSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9E216E2109FE950065A1C6 /* CustomSlider.xib */; };
 		FBAD52C721380DB6000ED29B /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBAD52BA21380D88000ED29B /* AFNetworking.framework */; };
 		FBAD52C821380DB6000ED29B /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FBAD52BA21380D88000ED29B /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -149,6 +150,7 @@
 		FB10B7262111BF7400037DFF /* RectPopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectPopOverViewController.swift; sourceTree = "<group>"; };
 		FB10B7282111C2BC00037DFF /* iPadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadViewController.swift; sourceTree = "<group>"; };
 		FB130BEC2125C2FD003A06A3 /* NSURLSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSURLSessionViewController.swift; sourceTree = "<group>"; };
+		FB76D31D213D7DAA003EBDBB /* VaryForTraitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaryForTraitsViewController.swift; sourceTree = "<group>"; };
 		FB9E216E2109FE950065A1C6 /* CustomSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSlider.xib; sourceTree = "<group>"; };
 		FBAD52AF21380D88000ED29B /* AFNetworking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AFNetworking.xcodeproj; path = "iOS_Question_Answer/ThirdParty/AFNetworking-master/AFNetworking.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		FBAD52CD21394C34000ED29B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Constraint.storyboard; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 				FBAD52D521395103000ED29B /* ConstraintListViewController.swift */,
 				FBAD52D72139517B000ED29B /* ProportionalConstraintViewController.swift */,
 				FBAD52E221396E9E000ED29B /* ProportionalHorizontalConstraintViewController.swift */,
+				FB76D31D213D7DAA003EBDBB /* VaryForTraitsViewController.swift */,
 			);
 			path = Constraints;
 			sourceTree = "<group>";
@@ -726,6 +729,7 @@
 				FBE26BB220EF8B5C0021987F /* BaseViewController.swift in Sources */,
 				FBCFDF5E21061B230081DE00 /* DeviceRotationViewController.swift in Sources */,
 				FB10B7292111C2BC00037DFF /* iPadViewController.swift in Sources */,
+				FB76D31E213D7DAA003EBDBB /* VaryForTraitsViewController.swift in Sources */,
 				FBFB51D220F4C94300CA08F3 /* DetailBasicSwiftViewController.swift in Sources */,
 				FBE26BB420EFAAAB0021987F /* NSOperationAndDispatchQueueViewController.swift in Sources */,
 				FBE01E8B2119A0C50053AAF1 /* GlobalClass.swift in Sources */,
