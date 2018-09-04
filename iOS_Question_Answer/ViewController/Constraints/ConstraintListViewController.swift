@@ -12,7 +12,7 @@ enum ConsraintType:String{
     case ProportionalConstraint = "Distribute proportional height"
     case ProportionalHorizontalConstraint = "Distribute proportional width and height"
     case Variation = "Font variation"
-    case VaryForTraits = "Vary for traits - phone 5 and iphone 8"
+    case VaryForTraits = "Vary for traits - support all orientation"
 }
 
 class ConstraintListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -67,7 +67,10 @@ class ConstraintListViewController: UIViewController, UITableViewDelegate, UITab
             self.navigationController?.pushViewController(ConstraintVC!, animated: true)
             return
         }else if(aryConstraintType[indexPath.row] == ConsraintType.VaryForTraits.rawValue){
-            childViewController = storyBoardConstraint.instantiateViewController(withIdentifier: kVaryForTraitsViewController) as? VaryForTraitsViewController
+            let VaryForTraitsVC = storyBoardConstraint.instantiateViewController(withIdentifier: kVaryForTraitsViewController) as? VaryForTraitsViewController
+            AppUtility.lockOrientation(.all, andRotateTo: .unknown)
+            self.navigationController?.pushViewController(VaryForTraitsVC!, animated: true)
+            return
         }
         
         guard (childViewController != nil) else {

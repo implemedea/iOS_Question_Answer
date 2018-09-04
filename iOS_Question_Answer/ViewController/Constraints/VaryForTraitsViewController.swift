@@ -11,6 +11,11 @@ import UIKit
 
 class VaryForTraitsViewController: UIViewController {
 
+    override func viewWillDisappear(_ animated: Bool) {
+        AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)
+        super.viewDidDisappear(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
