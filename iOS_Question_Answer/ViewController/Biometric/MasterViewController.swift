@@ -29,7 +29,9 @@
 import UIKit
 import CoreData
 
-class MasterViewController: UIViewController, UITableViewDelegate {
+class MasterViewController: UIViewController, UITableViewDelegate, closeLoginWindow {
+    
+    var signIn:Bool = false
 
   // MARK: - IBOutlets
   @IBOutlet var tableView: UITableView!
@@ -44,7 +46,7 @@ class MasterViewController: UIViewController, UITableViewDelegate {
   // MARK: - View Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
-
+    self.signIn = true
     navigationItem.leftBarButtonItem = editButtonItem
 
     let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
@@ -75,7 +77,9 @@ class MasterViewController: UIViewController, UITableViewDelegate {
 
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(false)
-    showLoginView()
+    if(self.signIn){
+        showLoginView()
+    }
   }
 
   override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -90,6 +94,7 @@ class MasterViewController: UIViewController, UITableViewDelegate {
   
   func showLoginView() {
     if !isAuthenticated {
+        self.signIn = true
       performSegue(withIdentifier: "loginView", sender: self)
     }
   }
@@ -136,12 +141,22 @@ class MasterViewController: UIViewController, UITableViewDelegate {
         let object = fetchedResultsController.object(at: indexPath)
         (segue.destination as! DetailViewController).detailItem = object
       }
+    }else if segue.identifier == "loginView" {
+        let objectLoginVC = segue.destination as! LoginViewController
+        objectLoginVC.delegate = self
     }
   }
 
   func configureCell(_ cell: UITableViewCell, withNote note: Note) {
     cell.textLabel?.text = note.noteText
   }
+    
+    //MARK:- delegate
+    
+    func closeWindow() {
+        self.signIn = false
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 // MARK: - UITableViewDataSource

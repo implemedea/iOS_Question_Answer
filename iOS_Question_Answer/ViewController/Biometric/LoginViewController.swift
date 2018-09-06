@@ -29,8 +29,14 @@
 import UIKit
 import CoreData
 
+protocol closeLoginWindow{
+    func closeWindow()
+}
+
 class LoginViewController: UIViewController {
 
+    var delegate:closeLoginWindow?
+    
   // MARK: Properties
   var managedObjectContext: NSManagedObjectContext?
 
@@ -47,6 +53,12 @@ class LoginViewController: UIViewController {
   override var preferredStatusBarStyle: UIStatusBarStyle {
     return .lightContent
   }
+    
+    @IBAction func closeView(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+        self.delegate?.closeWindow()
+    }
+    
 }
 
 // MARK: - IBActions
