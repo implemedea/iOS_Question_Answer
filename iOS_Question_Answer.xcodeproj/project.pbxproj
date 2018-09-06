@@ -15,6 +15,10 @@
 		FB10B7292111C2BC00037DFF /* iPadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB10B7282111C2BC00037DFF /* iPadViewController.swift */; };
 		FB130BED2125C2FD003A06A3 /* NSURLSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB130BEC2125C2FD003A06A3 /* NSURLSessionViewController.swift */; };
 		FB76D31E213D7DAA003EBDBB /* VaryForTraitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB76D31D213D7DAA003EBDBB /* VaryForTraitsViewController.swift */; };
+		FB7AEB9F21410A9400F23A26 /* Biometric.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB7AEB9721410A9400F23A26 /* Biometric.storyboard */; };
+		FB7AEBA421410AB400F23A26 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7AEBA121410AB400F23A26 /* LoginViewController.swift */; };
+		FB7AEBA521410AB400F23A26 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7AEBA221410AB400F23A26 /* DetailViewController.swift */; };
+		FB7AEBA621410AB400F23A26 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7AEBA321410AB400F23A26 /* MasterViewController.swift */; };
 		FB9E216F2109FE950065A1C6 /* CustomSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9E216E2109FE950065A1C6 /* CustomSlider.xib */; };
 		FBAD52C721380DB6000ED29B /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBAD52BA21380D88000ED29B /* AFNetworking.framework */; };
 		FBAD52C821380DB6000ED29B /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FBAD52BA21380D88000ED29B /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -151,6 +155,10 @@
 		FB10B7282111C2BC00037DFF /* iPadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadViewController.swift; sourceTree = "<group>"; };
 		FB130BEC2125C2FD003A06A3 /* NSURLSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSURLSessionViewController.swift; sourceTree = "<group>"; };
 		FB76D31D213D7DAA003EBDBB /* VaryForTraitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaryForTraitsViewController.swift; sourceTree = "<group>"; };
+		FB7AEB9821410A9400F23A26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Biometric.storyboard; sourceTree = "<group>"; };
+		FB7AEBA121410AB400F23A26 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = iOS_Question_Answer/ViewController/Biometric/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
+		FB7AEBA221410AB400F23A26 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = iOS_Question_Answer/ViewController/Biometric/DetailViewController.swift; sourceTree = SOURCE_ROOT; };
+		FB7AEBA321410AB400F23A26 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterViewController.swift; path = iOS_Question_Answer/ViewController/Biometric/MasterViewController.swift; sourceTree = SOURCE_ROOT; };
 		FB9E216E2109FE950065A1C6 /* CustomSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSlider.xib; sourceTree = "<group>"; };
 		FBAD52AF21380D88000ED29B /* AFNetworking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AFNetworking.xcodeproj; path = "iOS_Question_Answer/ThirdParty/AFNetworking-master/AFNetworking.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		FBAD52CD21394C34000ED29B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Constraint.storyboard; sourceTree = "<group>"; };
@@ -243,6 +251,17 @@
 				591FC5E8E0451B47F31B82E1 /* Pods-iOS_Question_AnswerUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FB7AEBA021410A9F00F23A26 /* Biometric */ = {
+			isa = PBXGroup;
+			children = (
+				FB7AEBA221410AB400F23A26 /* DetailViewController.swift */,
+				FB7AEBA121410AB400F23A26 /* LoginViewController.swift */,
+				FB7AEBA321410AB400F23A26 /* MasterViewController.swift */,
+			);
+			name = Biometric;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		FB9E216D2109FE3A0065A1C6 /* CustomComponent */ = {
@@ -358,6 +377,7 @@
 		FBCFDF66210769220081DE00 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FB7AEBA021410A9F00F23A26 /* Biometric */,
 				FBAD52DB21396E71000ED29B /* Constraints */,
 				FBCFDF64210766EB0081DE00 /* LocalNotificationViewController.swift */,
 				FBCE543920A42E81004BCE02 /* BasicSwiftViewController.swift */,
@@ -386,6 +406,7 @@
 		FBCFDF68210769410081DE00 /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				FB7AEB9721410A9400F23A26 /* Biometric.storyboard */,
 				FBCFDF6121070A6B0081DE00 /* LandScape.storyboard */,
 				FBCE543B20A42E81004BCE02 /* Main.storyboard */,
 				FBCE544320A42E81004BCE02 /* LaunchScreen.storyboard */,
@@ -613,6 +634,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBCE544520A42E81004BCE02 /* LaunchScreen.storyboard in Resources */,
+				FB7AEB9F21410A9400F23A26 /* Biometric.storyboard in Resources */,
 				FBCE544220A42E81004BCE02 /* Assets.xcassets in Resources */,
 				FBCFDF6321070A6B0081DE00 /* LandScape.storyboard in Resources */,
 				FBAD52CE21394C34000ED29B /* Constraint.storyboard in Resources */,
@@ -718,6 +740,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB7AEBA421410AB400F23A26 /* LoginViewController.swift in Sources */,
 				FB10B7272111BF7400037DFF /* RectPopOverViewController.swift in Sources */,
 				FBF4F4572138094000BC1A4A /* BackgroundSessionManager.m in Sources */,
 				FBAD52D82139517B000ED29B /* ProportionalConstraintViewController.swift in Sources */,
@@ -727,6 +750,7 @@
 				FBC9E500212D46C100841A1D /* KVOandKVOViewController.swift in Sources */,
 				FBAD52D621395103000ED29B /* ConstraintListViewController.swift in Sources */,
 				FBE26BB220EF8B5C0021987F /* BaseViewController.swift in Sources */,
+				FB7AEBA621410AB400F23A26 /* MasterViewController.swift in Sources */,
 				FBCFDF5E21061B230081DE00 /* DeviceRotationViewController.swift in Sources */,
 				FB10B7292111C2BC00037DFF /* iPadViewController.swift in Sources */,
 				FB76D31E213D7DAA003EBDBB /* VaryForTraitsViewController.swift in Sources */,
@@ -744,6 +768,7 @@
 				FBCB821921356A96002600CE /* UploadPhotoAPIHandler.swift in Sources */,
 				FBCE543820A42E81004BCE02 /* AppDelegate.swift in Sources */,
 				FBC9E4FB212C1EF300841A1D /* School.swift in Sources */,
+				FB7AEBA521410AB400F23A26 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,6 +815,14 @@
 				FB10B7242111BE5900037DFF /* Base */,
 			);
 			name = IPadStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		FB7AEB9721410A9400F23A26 /* Biometric.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB7AEB9821410A9400F23A26 /* Base */,
+			);
+			name = Biometric.storyboard;
 			sourceTree = "<group>";
 		};
 		FBAD52CC21394C34000ED29B /* Constraint.storyboard */ = {
@@ -947,7 +980,7 @@
 					"$(SRCROOT)/iOS_Question_Answer/ThirdParty/BackgroundSession/",
 				);
 				INFOPLIST_FILE = iOS_Question_Answer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/iOS_Question_Answer/ThirdParty/AFNetworking-master/";
 				PRODUCT_BUNDLE_IDENTIFIER = "sebastin.iOS-Question-Answer";
@@ -971,7 +1004,7 @@
 					"$(SRCROOT)/iOS_Question_Answer/ThirdParty/BackgroundSession/",
 				);
 				INFOPLIST_FILE = iOS_Question_Answer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/iOS_Question_Answer/ThirdParty/AFNetworking-master/";
 				PRODUCT_BUNDLE_IDENTIFIER = "sebastin.iOS-Question-Answer";

@@ -20,13 +20,14 @@ enum ViewController:Int{
     case NSURLSession = 7
     case CoreData = 8
     case Constraint = 9
+    case Biometric = 10
     
 }
 
 class BaseViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     
-    let aryContentList:Array = ["Swift concept", "NSOperation, Dispatch queue and Dispatch group", "Device rotation specfic view controller", "Local Notification", "Common Function", "Pop over view controller", "KVC & KVO", "NSURLSession", "CoreData", "Constraint types"]
+    let aryContentList:Array = ["Swift concept", "NSOperation, Dispatch queue and Dispatch group", "Device rotation specfic view controller", "Local Notification", "Common Function", "Pop over view controller", "KVC & KVO", "NSURLSession", "CoreData", "Constraint types", "Biometric"]
     
     let storyBoardMain:UIStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
     
@@ -81,6 +82,16 @@ class BaseViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             childViewController = storyBoardMain.instantiateViewController(withIdentifier: "NSURLSessionViewController")
         }else if(indexPath.row == ViewController.Constraint.rawValue){
             childViewController = storyBoardMain.instantiateViewController(withIdentifier: "ConstraintListViewController")
+        }else if(indexPath.row == ViewController.Biometric.rawValue){
+            let masterViewController = storyBoardMain.instantiateViewController(withIdentifier: "MasterViewController") as! MasterViewController
+            
+            if let delegate = UIApplication.shared.delegate as? AppDelegate {
+                masterViewController.managedObjectContext = delegate.persistentContainer.viewContext
+            }
+            prepareNavigationBarAppearance()
+            UINavigationBar.appearance().barStyle = .blackOpaque
+            self.navigationController?.pushViewController(masterViewController, animated: true)
+            return
         }
         
         guard (childViewController != nil) else {
@@ -93,6 +104,27 @@ class BaseViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+    }
+    
+    //MARK:- user defined function
+    
+    func prepareNavigationBarAppearance() {
+        
+        let barColor = UIColor(red: 43.0 / 255.0, green: 43.0 / 255.0, blue: 43.0 / 255.0, alpha: 1.0)
+        
+        UINavigationBar.appearance().barTintColor = barColor
+        UINavigationBar.appearance().tintColor = .white
+        
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+        let regularVertical = UITraitCollection(verticalSizeClass: .regular)
+        let titleDict: [NSAttributedStringKey: Any] = [.foregroundColor: UIColor.white]
+        
+        UINavigationBar.appearance(for: regularVertical).titleTextAttributes = titleDict
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        
+        UIToolbar.appearance().barTintColor = barColor
+        UIToolbar.appearance().tintColor = .white
     }
     
 
