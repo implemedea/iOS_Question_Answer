@@ -33,12 +33,22 @@ protocol closeLoginWindow{
     func closeWindow()
 }
 
+struct KeychainConfiguration {
+    static let serviceName = "TouchMeIn"
+    static let accessGroup:String? = nil
+}
+
 class LoginViewController: UIViewController {
 
     var delegate:closeLoginWindow?
     
   // MARK: Properties
   var managedObjectContext: NSManagedObjectContext?
+    var passwordItems:[KeychainPasswordItem] = []
+    let createLoginButtonTag = 0
+    let loginButtonTag = 1
+    @IBOutlet weak var loginButton: UIButton!
+
 
   // MARK: - IBOutlets
   @IBOutlet weak var usernameTextField: UITextField!
@@ -48,6 +58,20 @@ class LoginViewController: UIViewController {
   // MARK: - View Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    let hasLogin = UserDefaults.standard.bool(forKey: "hasLoginKey")
+    if(hasLogin){
+        loginButton.setTitle("Login", for: .normal)
+        loginButton.tag = loginButtonTag
+         createInfoLabel.isHidden = true
+    }else{
+        loginButton.setTitle("Create", for: .normal)
+        loginButton.tag = createLoginButtonTag
+         createInfoLabel.isHidden = false
+    }
+    if let storedUsername = UserDefaults.standard.value(forKey: "username") as? String {
+        usernameTextField.text = storedUsername
+    }
   }
   
   override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -64,7 +88,54 @@ class LoginViewController: UIViewController {
 // MARK: - IBActions
 extension LoginViewController {
 
-  @IBAction func loginAction(sender: Any) {
-      performSegue(withIdentifier: "dismissLogin", sender: self)
+  @IBAction func loginAction(sender: UIButton) {
+    guard let newAccountName = usernameTextField.text, let newPassword = passwordTextField.text, !newAccountName.isEmpty, !newPassword.isEmpty else {
+        self.showLoginFailedAlert()
+        return
+    }
+    self.usernameTextField.resignFirstResponder()
+    self.passwordTextField.resignFirstResponder()
+    
+    if(sender.tag == createLoginButtonTag){
+        let hasLoginKey = UserDefaults.standard.bool(forKey: "hasLoginKey")
+        if(!hasLoginKey && usernameTextField.hasText){
+            UserDefaults.standard.setValue(usernameTextField.text, forKey: "username")
+        }
+        do{
+            let passwordItem = KeychainPasswordItem(service: KeychainConfiguration.serviceName, account: newAccountName, accessGroup: KeychainConfiguration.accessGroup)
+            try passwordItem.savePassword(newPassword)
+        }catch{
+            fatalError("Error updating keychain - \(error)")
+        }
+        UserDefaults.standard.set(true, forKey: "hasLoginKey")
+        loginButton.tag = loginButtonTag
+         performSegue(withIdentifier: "dismissLogin", sender: self)
+    }else if(sender.tag == loginButtonTag){
+        if(self.checkLogin(username: usernameTextField.text!, password: passwordTextField.text!)){
+            performSegue(withIdentifier: "dismissLogin", sender: self)
+        }else{
+            self.showLoginFailedAlert()
+        }
+    }
   }
+    
+    func checkLogin(username:String, password:String)->Bool{
+        guard let username = UserDefaults.standard.value(forKey: "username") else {
+            return false
+        }
+        do{
+            let passwordItem = KeychainPasswordItem(service: KeychainConfiguration.serviceName, account: username as! String, accessGroup: KeychainConfiguration.accessGroup)
+            let keychainPassword = try passwordItem.readPassword()
+            return password == keychainPassword
+        }catch{
+            fatalError("Error reading password from keychain - \(error)")
+        }
+    }
+    
+    private func showLoginFailedAlert() {
+        let alertView = UIAlertController(title: "Login Problem", message: "Wrong username or password", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Foiled Again!", style: .default, handler: nil)
+        alertView.addAction(okAction)
+        present(alertView, animated: true, completion: nil)
+    }
 }
