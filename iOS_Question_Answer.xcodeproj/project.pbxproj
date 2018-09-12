@@ -9,24 +9,24 @@
 /* Begin PBXBuildFile section */
 		11A71C125CCE0D1D2462AAA9 /* Pods_iOS_Question_AnswerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 499803153BD8D4C540279A0A /* Pods_iOS_Question_AnswerTests.framework */; };
 		39FE8CE0E03BD90F37E6AE86 /* Pods_iOS_Question_AnswerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC32C5AF2020110E04209F5 /* Pods_iOS_Question_AnswerUITests.framework */; };
-		DFBC20E879883C4575D07231 /* Pods_iOS_Question_Answer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D906DDA95268934E3D8FCAF1 /* Pods_iOS_Question_Answer.framework */; };
 		FB10B7252111BE5900037DFF /* IPadStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB10B7232111BE5900037DFF /* IPadStoryboard.storyboard */; };
 		FB10B7272111BF7400037DFF /* RectPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB10B7262111BF7400037DFF /* RectPopOverViewController.swift */; };
 		FB10B7292111C2BC00037DFF /* iPadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB10B7282111C2BC00037DFF /* iPadViewController.swift */; };
 		FB130BED2125C2FD003A06A3 /* NSURLSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB130BEC2125C2FD003A06A3 /* NSURLSessionViewController.swift */; };
 		FB76D31E213D7DAA003EBDBB /* VaryForTraitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB76D31D213D7DAA003EBDBB /* VaryForTraitsViewController.swift */; };
 		FB7AEB9F21410A9400F23A26 /* Biometric.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB7AEB9721410A9400F23A26 /* Biometric.storyboard */; };
-		FB7AEBA421410AB400F23A26 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7AEBA121410AB400F23A26 /* LoginViewController.swift */; };
-		FB7AEBA521410AB400F23A26 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7AEBA221410AB400F23A26 /* DetailViewController.swift */; };
-		FB7AEBA621410AB400F23A26 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7AEBA321410AB400F23A26 /* MasterViewController.swift */; };
 		FB9E216F2109FE950065A1C6 /* CustomSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9E216E2109FE950065A1C6 /* CustomSlider.xib */; };
 		FBA189B021428AD1005E9BFA /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA189A921428AD1005E9BFA /* KeychainPasswordItem.swift */; };
-		FBAD52C721380DB6000ED29B /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBAD52BA21380D88000ED29B /* AFNetworking.framework */; };
-		FBAD52C821380DB6000ED29B /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FBAD52BA21380D88000ED29B /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FBAD52CE21394C34000ED29B /* Constraint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBAD52CC21394C34000ED29B /* Constraint.storyboard */; };
 		FBAD52D621395103000ED29B /* ConstraintListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD52D521395103000ED29B /* ConstraintListViewController.swift */; };
 		FBAD52D82139517B000ED29B /* ProportionalConstraintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD52D72139517B000ED29B /* ProportionalConstraintViewController.swift */; };
 		FBAD52E321396E9E000ED29B /* ProportionalHorizontalConstraintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD52E221396E9E000ED29B /* ProportionalHorizontalConstraintViewController.swift */; };
+		FBB4F70A21468A69002D090E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4F70721468A68002D090E /* DetailViewController.swift */; };
+		FBB4F70B21468A69002D090E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4F70821468A68002D090E /* LoginViewController.swift */; };
+		FBB4F70C21468A69002D090E /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4F70921468A68002D090E /* MasterViewController.swift */; };
+		FBB4F87321468AA1002D090E /* TouchIDAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4F87221468AA1002D090E /* TouchIDAuthentication.swift */; };
+		FBB4F88D2146937B002D090E /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB4F88021469368002D090E /* AFNetworking.framework */; };
+		FBB4F88E2146937B002D090E /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FBB4F88021469368002D090E /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FBB5720B210B3510002F61BC /* CommonFunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB5720A210B3510002F61BC /* CommonFunctionViewController.swift */; };
 		FBB5720F210B39A8002F61BC /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB5720E210B39A8002F61BC /* GlobalConstant.swift */; };
 		FBC9E4FB212C1EF300841A1D /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9E4FA212C1EF300841A1D /* School.swift */; };
@@ -55,58 +55,58 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FBAD52B921380D88000ED29B /* PBXContainerItemProxy */ = {
+		FBB4F87F21469368002D090E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FBAD52AF21380D88000ED29B /* AFNetworking.xcodeproj */;
+			containerPortal = FBB4F87521469367002D090E /* AFNetworking.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 299522391BBF104D00859F49;
 			remoteInfo = "AFNetworking iOS";
 		};
-		FBAD52BB21380D88000ED29B /* PBXContainerItemProxy */ = {
+		FBB4F88121469368002D090E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FBAD52AF21380D88000ED29B /* AFNetworking.xcodeproj */;
+			containerPortal = FBB4F87521469367002D090E /* AFNetworking.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 299522651BBF129200859F49;
 			remoteInfo = "AFNetworking watchOS";
 		};
-		FBAD52BD21380D88000ED29B /* PBXContainerItemProxy */ = {
+		FBB4F88321469368002D090E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FBAD52AF21380D88000ED29B /* AFNetworking.xcodeproj */;
+			containerPortal = FBB4F87521469367002D090E /* AFNetworking.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 299522771BBF136400859F49;
 			remoteInfo = "AFNetworking OS X";
 		};
-		FBAD52BF21380D88000ED29B /* PBXContainerItemProxy */ = {
+		FBB4F88521469368002D090E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FBAD52AF21380D88000ED29B /* AFNetworking.xcodeproj */;
+			containerPortal = FBB4F87521469367002D090E /* AFNetworking.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2987B0A51BC408A200179A4C;
 			remoteInfo = "AFNetworking tvOS";
 		};
-		FBAD52C121380D88000ED29B /* PBXContainerItemProxy */ = {
+		FBB4F88721469368002D090E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FBAD52AF21380D88000ED29B /* AFNetworking.xcodeproj */;
+			containerPortal = FBB4F87521469367002D090E /* AFNetworking.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 298D7C3B1BC2C79500FD3B3E;
 			remoteInfo = "AFNetworking iOS Tests";
 		};
-		FBAD52C321380D88000ED29B /* PBXContainerItemProxy */ = {
+		FBB4F88921469368002D090E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FBAD52AF21380D88000ED29B /* AFNetworking.xcodeproj */;
+			containerPortal = FBB4F87521469367002D090E /* AFNetworking.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 298D7C4A1BC2C7B200FD3B3E;
 			remoteInfo = "AFNetworking Mac OS X Tests";
 		};
-		FBAD52C521380D88000ED29B /* PBXContainerItemProxy */ = {
+		FBB4F88B21469368002D090E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FBAD52AF21380D88000ED29B /* AFNetworking.xcodeproj */;
+			containerPortal = FBB4F87521469367002D090E /* AFNetworking.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2987B0AE1BC408A200179A4C;
 			remoteInfo = "AFNetworking tvOS Tests";
 		};
-		FBAD52C921380DB6000ED29B /* PBXContainerItemProxy */ = {
+		FBB4F88F2146937B002D090E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FBAD52AF21380D88000ED29B /* AFNetworking.xcodeproj */;
+			containerPortal = FBB4F87521469367002D090E /* AFNetworking.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 299522381BBF104D00859F49;
 			remoteInfo = "AFNetworking iOS";
@@ -134,7 +134,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FBAD52C821380DB6000ED29B /* AFNetworking.framework in Embed Frameworks */,
+				FBB4F88E2146937B002D090E /* AFNetworking.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,16 +157,17 @@
 		FB130BEC2125C2FD003A06A3 /* NSURLSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSURLSessionViewController.swift; sourceTree = "<group>"; };
 		FB76D31D213D7DAA003EBDBB /* VaryForTraitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaryForTraitsViewController.swift; sourceTree = "<group>"; };
 		FB7AEB9821410A9400F23A26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Biometric.storyboard; sourceTree = "<group>"; };
-		FB7AEBA121410AB400F23A26 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = iOS_Question_Answer/ViewController/Biometric/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
-		FB7AEBA221410AB400F23A26 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = iOS_Question_Answer/ViewController/Biometric/DetailViewController.swift; sourceTree = SOURCE_ROOT; };
-		FB7AEBA321410AB400F23A26 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterViewController.swift; path = iOS_Question_Answer/ViewController/Biometric/MasterViewController.swift; sourceTree = SOURCE_ROOT; };
 		FB9E216E2109FE950065A1C6 /* CustomSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSlider.xib; sourceTree = "<group>"; };
 		FBA189A921428AD1005E9BFA /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
-		FBAD52AF21380D88000ED29B /* AFNetworking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AFNetworking.xcodeproj; path = "iOS_Question_Answer/ThirdParty/AFNetworking-master/AFNetworking.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		FBAD52CD21394C34000ED29B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Constraint.storyboard; sourceTree = "<group>"; };
 		FBAD52D521395103000ED29B /* ConstraintListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintListViewController.swift; sourceTree = "<group>"; };
 		FBAD52D72139517B000ED29B /* ProportionalConstraintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProportionalConstraintViewController.swift; sourceTree = "<group>"; };
 		FBAD52E221396E9E000ED29B /* ProportionalHorizontalConstraintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProportionalHorizontalConstraintViewController.swift; sourceTree = "<group>"; };
+		FBB4F70721468A68002D090E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FBB4F70821468A68002D090E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FBB4F70921468A68002D090E /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		FBB4F87221468AA1002D090E /* TouchIDAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDAuthentication.swift; sourceTree = "<group>"; };
+		FBB4F87521469367002D090E /* AFNetworking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = AFNetworking.xcodeproj; sourceTree = "<group>"; };
 		FBB5720A210B3510002F61BC /* CommonFunctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctionViewController.swift; sourceTree = "<group>"; };
 		FBB5720E210B39A8002F61BC /* GlobalConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
 		FBC9E4FA212C1EF300841A1D /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
@@ -208,8 +209,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFBC20E879883C4575D07231 /* Pods_iOS_Question_Answer.framework in Frameworks */,
-				FBAD52C721380DB6000ED29B /* AFNetworking.framework in Frameworks */,
+				FBB4F88D2146937B002D090E /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,46 +255,12 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		FB7AEBA021410A9F00F23A26 /* Biometric */ = {
-			isa = PBXGroup;
-			children = (
-				FB7AEBA221410AB400F23A26 /* DetailViewController.swift */,
-				FB7AEBA121410AB400F23A26 /* LoginViewController.swift */,
-				FB7AEBA321410AB400F23A26 /* MasterViewController.swift */,
-			);
-			name = Biometric;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		FB9E216D2109FE3A0065A1C6 /* CustomComponent */ = {
 			isa = PBXGroup;
 			children = (
 				FB9E216E2109FE950065A1C6 /* CustomSlider.xib */,
 			);
 			path = CustomComponent;
-			sourceTree = "<group>";
-		};
-		FBAD529721380D35000ED29B /* AFNetworking-master */ = {
-			isa = PBXGroup;
-			children = (
-				FBAD52AF21380D88000ED29B /* AFNetworking.xcodeproj */,
-			);
-			name = "AFNetworking-master";
-			path = "New Group";
-			sourceTree = "<group>";
-		};
-		FBAD52B021380D88000ED29B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FBAD52BA21380D88000ED29B /* AFNetworking.framework */,
-				FBAD52BC21380D88000ED29B /* AFNetworking.framework */,
-				FBAD52BE21380D88000ED29B /* AFNetworking.framework */,
-				FBAD52C021380D88000ED29B /* AFNetworking.framework */,
-				FBAD52C221380D88000ED29B /* AFNetworking iOS Tests.xctest */,
-				FBAD52C421380D88000ED29B /* AFNetworking Mac OS X Tests.xctest */,
-				FBAD52C621380D88000ED29B /* AFNetworking tvOS Tests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		FBAD52DB21396E71000ED29B /* Constraints */ = {
@@ -306,6 +272,48 @@
 				FB76D31D213D7DAA003EBDBB /* VaryForTraitsViewController.swift */,
 			);
 			path = Constraints;
+			sourceTree = "<group>";
+		};
+		FBB4F70621468A68002D090E /* Biometric */ = {
+			isa = PBXGroup;
+			children = (
+				FBB4F70721468A68002D090E /* DetailViewController.swift */,
+				FBB4F70821468A68002D090E /* LoginViewController.swift */,
+				FBB4F70921468A68002D090E /* MasterViewController.swift */,
+				FBB4F87221468AA1002D090E /* TouchIDAuthentication.swift */,
+			);
+			path = Biometric;
+			sourceTree = "<group>";
+		};
+		FBB4F70D21468A90002D090E /* AFNetworking-master */ = {
+			isa = PBXGroup;
+			children = (
+				FBB4F87521469367002D090E /* AFNetworking.xcodeproj */,
+			);
+			path = "AFNetworking-master";
+			sourceTree = "<group>";
+		};
+		FBB4F87621469367002D090E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FBB4F88021469368002D090E /* AFNetworking.framework */,
+				FBB4F88221469368002D090E /* AFNetworking.framework */,
+				FBB4F88421469368002D090E /* AFNetworking.framework */,
+				FBB4F88621469368002D090E /* AFNetworking.framework */,
+				FBB4F88821469368002D090E /* AFNetworking iOS Tests.xctest */,
+				FBB4F88A21469368002D090E /* AFNetworking Mac OS X Tests.xctest */,
+				FBB4F88C21469368002D090E /* AFNetworking tvOS Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FBB4F8932149228E002D090E /* BasicSwift */ = {
+			isa = PBXGroup;
+			children = (
+				FBFB51D120F4C94300CA08F3 /* DetailBasicSwiftViewController.swift */,
+				FBCE543920A42E81004BCE02 /* BasicSwiftViewController.swift */,
+			);
+			path = BasicSwift;
 			sourceTree = "<group>";
 		};
 		FBB5720D210B3976002F61BC /* Constant */ = {
@@ -379,13 +387,12 @@
 		FBCFDF66210769220081DE00 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				FB7AEBA021410A9F00F23A26 /* Biometric */,
+				FBB4F8932149228E002D090E /* BasicSwift */,
+				FBB4F70621468A68002D090E /* Biometric */,
 				FBAD52DB21396E71000ED29B /* Constraints */,
 				FBCFDF64210766EB0081DE00 /* LocalNotificationViewController.swift */,
-				FBCE543920A42E81004BCE02 /* BasicSwiftViewController.swift */,
 				FBE26BB120EF8B5C0021987F /* BaseViewController.swift */,
 				FBE26BB320EFAAAB0021987F /* NSOperationAndDispatchQueueViewController.swift */,
-				FBFB51D120F4C94300CA08F3 /* DetailBasicSwiftViewController.swift */,
 				FBCFDF5D21061B230081DE00 /* DeviceRotationViewController.swift */,
 				FBB5720A210B3510002F61BC /* CommonFunctionViewController.swift */,
 				FB10B7262111BF7400037DFF /* RectPopOverViewController.swift */,
@@ -442,7 +449,7 @@
 		FBF4F2EE2138093F00BC1A4A /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				FBAD529721380D35000ED29B /* AFNetworking-master */,
+				FBB4F70D21468A90002D090E /* AFNetworking-master */,
 				FBF4F3B42138094000BC1A4A /* BackgroundSession */,
 			);
 			path = ThirdParty;
@@ -474,7 +481,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				FBAD52CA21380DB6000ED29B /* PBXTargetDependency */,
+				FBB4F8902146937B002D090E /* PBXTargetDependency */,
 			);
 			name = iOS_Question_Answer;
 			productName = iOS_Question_Answer;
@@ -566,8 +573,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = FBAD52B021380D88000ED29B /* Products */;
-					ProjectRef = FBAD52AF21380D88000ED29B /* AFNetworking.xcodeproj */;
+					ProductGroup = FBB4F87621469367002D090E /* Products */;
+					ProjectRef = FBB4F87521469367002D090E /* AFNetworking.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -580,53 +587,53 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		FBAD52BA21380D88000ED29B /* AFNetworking.framework */ = {
+		FBB4F88021469368002D090E /* AFNetworking.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = AFNetworking.framework;
-			remoteRef = FBAD52B921380D88000ED29B /* PBXContainerItemProxy */;
+			remoteRef = FBB4F87F21469368002D090E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FBAD52BC21380D88000ED29B /* AFNetworking.framework */ = {
+		FBB4F88221469368002D090E /* AFNetworking.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = AFNetworking.framework;
-			remoteRef = FBAD52BB21380D88000ED29B /* PBXContainerItemProxy */;
+			remoteRef = FBB4F88121469368002D090E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FBAD52BE21380D88000ED29B /* AFNetworking.framework */ = {
+		FBB4F88421469368002D090E /* AFNetworking.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = AFNetworking.framework;
-			remoteRef = FBAD52BD21380D88000ED29B /* PBXContainerItemProxy */;
+			remoteRef = FBB4F88321469368002D090E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FBAD52C021380D88000ED29B /* AFNetworking.framework */ = {
+		FBB4F88621469368002D090E /* AFNetworking.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = AFNetworking.framework;
-			remoteRef = FBAD52BF21380D88000ED29B /* PBXContainerItemProxy */;
+			remoteRef = FBB4F88521469368002D090E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FBAD52C221380D88000ED29B /* AFNetworking iOS Tests.xctest */ = {
+		FBB4F88821469368002D090E /* AFNetworking iOS Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "AFNetworking iOS Tests.xctest";
-			remoteRef = FBAD52C121380D88000ED29B /* PBXContainerItemProxy */;
+			remoteRef = FBB4F88721469368002D090E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FBAD52C421380D88000ED29B /* AFNetworking Mac OS X Tests.xctest */ = {
+		FBB4F88A21469368002D090E /* AFNetworking Mac OS X Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "AFNetworking Mac OS X Tests.xctest";
-			remoteRef = FBAD52C321380D88000ED29B /* PBXContainerItemProxy */;
+			remoteRef = FBB4F88921469368002D090E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FBAD52C621380D88000ED29B /* AFNetworking tvOS Tests.xctest */ = {
+		FBB4F88C21469368002D090E /* AFNetworking tvOS Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "AFNetworking tvOS Tests.xctest";
-			remoteRef = FBAD52C521380D88000ED29B /* PBXContainerItemProxy */;
+			remoteRef = FBB4F88B21469368002D090E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -743,18 +750,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB7AEBA421410AB400F23A26 /* LoginViewController.swift in Sources */,
 				FB10B7272111BF7400037DFF /* RectPopOverViewController.swift in Sources */,
 				FBF4F4572138094000BC1A4A /* BackgroundSessionManager.m in Sources */,
 				FBAD52D82139517B000ED29B /* ProportionalConstraintViewController.swift in Sources */,
 				FBCE544020A42E81004BCE02 /* iOS_Question_Answer.xcdatamodeld in Sources */,
 				FBA189B021428AD1005E9BFA /* KeychainPasswordItem.swift in Sources */,
+				FBB4F70B21468A69002D090E /* LoginViewController.swift in Sources */,
 				FBAD52E321396E9E000ED29B /* ProportionalHorizontalConstraintViewController.swift in Sources */,
 				FBCB821D2136A3FA002600CE /* uploadImage.swift in Sources */,
 				FBC9E500212D46C100841A1D /* KVOandKVOViewController.swift in Sources */,
 				FBAD52D621395103000ED29B /* ConstraintListViewController.swift in Sources */,
 				FBE26BB220EF8B5C0021987F /* BaseViewController.swift in Sources */,
-				FB7AEBA621410AB400F23A26 /* MasterViewController.swift in Sources */,
 				FBCFDF5E21061B230081DE00 /* DeviceRotationViewController.swift in Sources */,
 				FB10B7292111C2BC00037DFF /* iPadViewController.swift in Sources */,
 				FB76D31E213D7DAA003EBDBB /* VaryForTraitsViewController.swift in Sources */,
@@ -764,6 +770,8 @@
 				FBE01E89211981F90053AAF1 /* Student.swift in Sources */,
 				FBC9E4FE212C4FE100841A1D /* PopoverNavigationController.swift in Sources */,
 				FBB5720B210B3510002F61BC /* CommonFunctionViewController.swift in Sources */,
+				FBB4F70C21468A69002D090E /* MasterViewController.swift in Sources */,
+				FBB4F87321468AA1002D090E /* TouchIDAuthentication.swift in Sources */,
 				FBB5720F210B39A8002F61BC /* GlobalConstant.swift in Sources */,
 				FBCE543A20A42E81004BCE02 /* BasicSwiftViewController.swift in Sources */,
 				FBC9E502212D6CBC00841A1D /* DownloadManager.swift in Sources */,
@@ -772,7 +780,7 @@
 				FBCB821921356A96002600CE /* UploadPhotoAPIHandler.swift in Sources */,
 				FBCE543820A42E81004BCE02 /* AppDelegate.swift in Sources */,
 				FBC9E4FB212C1EF300841A1D /* School.swift in Sources */,
-				FB7AEBA521410AB400F23A26 /* DetailViewController.swift in Sources */,
+				FBB4F70A21468A69002D090E /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -795,10 +803,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FBAD52CA21380DB6000ED29B /* PBXTargetDependency */ = {
+		FBB4F8902146937B002D090E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "AFNetworking iOS";
-			targetProxy = FBAD52C921380DB6000ED29B /* PBXContainerItemProxy */;
+			targetProxy = FBB4F88F2146937B002D090E /* PBXContainerItemProxy */;
 		};
 		FBCE544D20A42E83004BCE02 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -912,7 +920,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -963,7 +971,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

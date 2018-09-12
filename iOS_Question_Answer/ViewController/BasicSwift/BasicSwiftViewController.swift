@@ -23,6 +23,8 @@ enum topic:String{
     case AutoClosure = "Auto Closure"
     case EscapeClosure = "Escaping Closure"
     case KVC = "KVC"
+    case CompileTimePolymorphism = "Compile Time Polymorphism"
+    case RunTimePolymorphism = "Run Time Polymorphism"
     
 }
 
@@ -34,7 +36,7 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
     }()
     
     
-    let aryTopic = [topic.ifLet.rawValue,topic.guardLet.rawValue,topic.LazyProperty.rawValue,topic.tuple.rawValue,topic.HOF_sort.rawValue,topic.HOF_map.rawValue,topic.HOF_reduce.rawValue,topic.HOF_filter.rawValue,topic.Any_AnyObject.rawValue,topic.Attributed_String.rawValue,topic.TrailingClosure.rawValue,topic.AutoClosure.rawValue,topic.EscapeClosure.rawValue,topic.KVC.rawValue] as [Any]
+    let aryTopic = [topic.ifLet.rawValue,topic.guardLet.rawValue,topic.LazyProperty.rawValue,topic.tuple.rawValue,topic.HOF_sort.rawValue,topic.HOF_map.rawValue,topic.HOF_reduce.rawValue,topic.HOF_filter.rawValue,topic.Any_AnyObject.rawValue,topic.Attributed_String.rawValue,topic.TrailingClosure.rawValue,topic.AutoClosure.rawValue,topic.EscapeClosure.rawValue,topic.KVC.rawValue,topic.CompileTimePolymorphism.rawValue, topic.RunTimePolymorphism.rawValue] as [Any]
    
     let storyBoardMain:UIStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
 
@@ -189,7 +191,17 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
         
     }
     
+    //MARK:- Compile time polymorphism or Static polymorphism
     
+    func addNums(i: Int, j: Int) -> Int
+    {
+        return i + j
+    }
+    
+    func addNums(i: Int, j: Int, k: Int) -> Int
+    {
+        return i + j + k
+    }
     
     
     
@@ -248,9 +260,6 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
         guard let childViewController = storyBoardMain.instantiateViewController(withIdentifier: "DetailBasicSwiftViewController") as? DetailBasicSwiftViewController else{
             return
         }
-        
-        childViewController.strTopic = (aryTopic[indexPath.row] as? String)!
-        
         if(aryTopic[indexPath.row] as! String == topic.ifLet.rawValue){
             self.ifLet()
         }else if(aryTopic[indexPath.row] as! String == topic.guardLet.rawValue){
@@ -283,6 +292,7 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
             self.autoClosure(completion: "hello world")
             
         }else if(aryTopic[indexPath.row] as! String == topic.EscapeClosure.rawValue){
+            childViewController.strTopic = (aryTopic[indexPath.row] as? String)!
             self.escapeClosure(url: "http://cdn1.medicalnewstoday.com/content/images/articles/271157-bananas.jpg", completion: { (data, error) in
                 if(error == nil){
                     DispatchQueue.main.async {
@@ -293,11 +303,22 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
                     print(error!)
                 }
             })
+            self.navigationController?.pushViewController(childViewController, animated: true)
             
         }else if(aryTopic[indexPath.row] as! String == topic.KVC.rawValue){
             self.kvc()
+        }else if(aryTopic[indexPath.row] as! String == topic.CompileTimePolymorphism.rawValue){
+            print("addNums with two args = ", addNums(i: 2, j: 3))
+            print("addNums with three args = ", addNums(i: 2, j: 3, k: 5))
+        }else if(aryTopic[indexPath.row] as! String == topic.RunTimePolymorphism.rawValue){
+            var animal: Animal
+            animal = Cat()
+            print(animal.makeNoise())
+            
+            animal = Dog()
+            print(animal.makeNoise())
         }
-        self.navigationController?.pushViewController(childViewController, animated: true)
+        
     }
     
     
@@ -341,6 +362,32 @@ extension UILabel {
         let text = self.text
         self.attributedText = nil
         self.text = text
+    }
+}
+
+//MARK:- Run time polymorphism or Dynamic polymorphism
+
+class Animal
+{
+    func makeNoise()
+    {
+        print("Durrr")
+    }
+}
+
+class Cat : Animal
+{
+    override func makeNoise()
+    {
+        print("Meoooowwwww")
+    }
+}
+
+class Dog : Animal
+{
+    override func makeNoise()
+    {
+        print("Woooooof")
     }
 }
 

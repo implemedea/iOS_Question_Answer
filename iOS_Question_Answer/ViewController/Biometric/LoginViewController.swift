@@ -41,6 +41,7 @@ struct KeychainConfiguration {
 class LoginViewController: UIViewController {
 
     var delegate:closeLoginWindow?
+    let touchMe = BiometricIDAuth()
     
   // MARK: Properties
   var managedObjectContext: NSManagedObjectContext?
@@ -55,10 +56,21 @@ class LoginViewController: UIViewController {
   @IBOutlet weak var passwordTextField: UITextField!
   @IBOutlet weak var createInfoLabel: UILabel!  
 
-  // MARK: - View Life Cycle
+    @IBOutlet weak var touchIdButton: UIButton!
+    // MARK: - View Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    switch touchMe.biometricType(){
+    case .touchID:
+        touchIdButton.setImage(UIImage(named:"Touch-icon-lg"), for: .normal)
+    case .faceID:
+        touchIdButton.setImage(UIImage(named:"FaceIcon"), for: .normal)
+    case .none:
+        touchIdButton.setImage(UIImage(named:"Touch-icon-lg"), for: .normal)
+    }
+    
+    touchIdButton.isHidden = !touchMe.canEvaluatePolicy()
     let hasLogin = UserDefaults.standard.bool(forKey: "hasLoginKey")
     if(hasLogin){
         loginButton.setTitle("Login", for: .normal)
@@ -87,6 +99,8 @@ class LoginViewController: UIViewController {
 
 // MARK: - IBActions
 extension LoginViewController {
+    
+    
 
   @IBAction func loginAction(sender: UIButton) {
     guard let newAccountName = usernameTextField.text, let newPassword = passwordTextField.text, !newAccountName.isEmpty, !newPassword.isEmpty else {
@@ -138,4 +152,16 @@ extension LoginViewController {
         alertView.addAction(okAction)
         present(alertView, animated: true, completion: nil)
     }
+    
+    @IBAction func touchIDLoginAction(sender: UIButton) {
+        touchMe.authenticateUser() { [weak self] in
+            self?.performSegue(withIdentifier: "dismissLogin", sender: self)
+        }
+        
+      
+    }
+    
+    
 }
+
+

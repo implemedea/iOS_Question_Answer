@@ -138,7 +138,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="eyn-br-LqP">
-                                <rect key="frame" x="0.0" y="80" width="375" height="402"/>
+                                <rect key="frame" x="0.0" y="80" width="375" height="332"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJ7-Wh-cd1">
                                         <rect key="frame" x="112" y="0.0" width="151.5" height="79.5"/>
@@ -189,12 +189,15 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Pl-BW-HYK">
-                                        <rect key="frame" x="154.5" y="265" width="66" height="137"/>
+                                        <rect key="frame" x="154.5" y="265" width="66" height="67"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="67" id="Wyy-rd-CeI"/>
                                             <constraint firstAttribute="width" constant="66" id="uav-mh-gsQ"/>
                                         </constraints>
                                         <state key="normal" image="Touch-icon-lg"/>
+                                        <connections>
+                                            <action selector="touchIDLoginActionWithSender:" destination="glm-1q-XSS" eventType="touchUpInside" id="bXT-2R-cBK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -224,7 +227,7 @@
                             <constraint firstItem="eyn-br-LqP" firstAttribute="leading" secondItem="AiG-m7-fVK" secondAttribute="leading" id="KhH-cB-D7b"/>
                             <constraint firstItem="N7N-Sp-mjc" firstAttribute="top" secondItem="AiG-m7-fVK" secondAttribute="top" id="L0S-58-wxV"/>
                             <constraint firstItem="AiG-m7-fVK" firstAttribute="trailing" secondItem="eyn-br-LqP" secondAttribute="trailing" id="Zhn-xh-O4F"/>
-                            <constraint firstAttribute="bottom" secondItem="eyn-br-LqP" secondAttribute="bottom" constant="411" id="loo-io-TVi"/>
+                            <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="eyn-br-LqP" secondAttribute="bottom" constant="411" id="loo-io-TVi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AiG-m7-fVK"/>
                     </view>
@@ -232,6 +235,7 @@
                         <outlet property="createInfoLabel" destination="N89-S8-6tO" id="NWJ-Bk-T4o"/>
                         <outlet property="loginButton" destination="eRr-Oj-5kq" id="B8G-Wd-Njh"/>
                         <outlet property="passwordTextField" destination="gcl-FI-3Ka" id="E9K-za-QiZ"/>
+                        <outlet property="touchIdButton" destination="0Pl-BW-HYK" id="hvE-cy-HzM"/>
                         <outlet property="usernameTextField" destination="IsR-6S-Bxn" id="xN1-mc-B3L"/>
                         <segue destination="hcN-Fr-4gx" kind="unwind" identifier="dismissLogin" unwindAction="unwindSegue:" id="9yC-9I-JnV"/>
                     </connections>
