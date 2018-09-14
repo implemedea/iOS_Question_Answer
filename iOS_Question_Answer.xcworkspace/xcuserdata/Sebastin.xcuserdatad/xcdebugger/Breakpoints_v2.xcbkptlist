@@ -138,22 +138,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOS_Question_Answer/ViewController/Biometric/MasterViewController.swift"
-            timestampString = "558000138.980208"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iOS_Question_Answer/ViewController/Biometric/MasterViewController.swift"
             timestampString = "558000138.980837"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -186,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOS_Question_Answer/ViewController/Biometric/LoginViewController.swift"
-            timestampString = "558441905.5737621"
+            timestampString = "558616621.5707951"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "LoginViewController"
             landmarkType = "21">
          </BreakpointContent>
@@ -202,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOS_Question_Answer/ViewController/Biometric/LoginViewController.swift"
-            timestampString = "558441905.573867"
+            timestampString = "558616621.571291"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
             landmarkName = "loginAction(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -217,14 +201,110 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "iOS_Question_Answer/ViewController/BasicSwift/BasicSwiftViewController.swift"
-            timestampString = "558613564.115164"
+            filePath = "iOS_Question_Answer/ViewController/Biometric/LoginViewController.swift"
+            timestampString = "558616774.425133"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "336"
-            endingLineNumber = "336"
-            landmarkName = "tableView(_:didSelectRowAt:)"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "touchIDLoginAction(sender:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Question_Answer.LoginViewController.touchIDLoginAction(sender: __ObjC.UIButton) -&gt; ()"
+                  moduleName = "iOS_Question_Answer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sebastin/Documents/Sebastin/iOS_Project/Git/iOS_Question_Answer/ViewController/Biometric/LoginViewController.swift"
+                  timestampString = "558616774.648128"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "168"
+                  endingLineNumber = "168"
+                  offsetFromSymbolStart = "49">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in iOS_Question_Answer.LoginViewController.touchIDLoginAction(sender: __ObjC.UIButton) -&gt; ()"
+                  moduleName = "iOS_Question_Answer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sebastin/Documents/Sebastin/iOS_Project/Git/iOS_Question_Answer/ViewController/Biometric/LoginViewController.swift"
+                  timestampString = "558616774.651029"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "168"
+                  endingLineNumber = "168"
+                  offsetFromSymbolStart = "115">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS_Question_Answer/ViewController/Biometric/TouchIDAuthentication.swift"
+            timestampString = "558623803.2456011"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "authenticateUser(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS_Question_Answer/ViewController/Biometric/TouchIDAuthentication.swift"
+            timestampString = "558623803.246182"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "authenticateUser(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in iOS_Question_Answer.BiometricIDAuth.authenticateUser(completion: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "iOS_Question_Answer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sebastin/Documents/Sebastin/iOS_Project/Git/iOS_Question_Answer/ViewController/Biometric/TouchIDAuthentication.swift"
+                  timestampString = "558616839.38597"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "111">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in iOS_Question_Answer.BiometricIDAuth.authenticateUser(completion: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "iOS_Question_Answer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Sebastin/Documents/Sebastin/iOS_Project/Git/iOS_Question_Answer/ViewController/Biometric/TouchIDAuthentication.swift"
+                  timestampString = "558616839.389773"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "46">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

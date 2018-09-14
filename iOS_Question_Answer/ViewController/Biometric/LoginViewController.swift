@@ -57,7 +57,18 @@ class LoginViewController: UIViewController {
   @IBOutlet weak var createInfoLabel: UILabel!  
 
     @IBOutlet weak var touchIdButton: UIButton!
+    
+    
     // MARK: - View Life Cycle
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let touchBool = touchMe.canEvaluatePolicy()
+        if(touchBool){
+            touchIDLoginAction(sender: touchIdButton)
+        }
+    }
+    
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -154,11 +165,16 @@ extension LoginViewController {
     }
     
     @IBAction func touchIDLoginAction(sender: UIButton) {
-        touchMe.authenticateUser() { [weak self] in
-            self?.performSegue(withIdentifier: "dismissLogin", sender: self)
+        touchMe.authenticateUser {[weak self] (message) in
+            if let message = message{
+                let alertview = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                alertview.addAction(okAction)
+                self?.present(alertview, animated: true, completion: nil)
+            }else{
+                 self?.performSegue(withIdentifier: "dismissLogin", sender: self)
+            }
         }
-        
-      
     }
     
     

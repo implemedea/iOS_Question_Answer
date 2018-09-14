@@ -338,7 +338,6 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
         
     }
     
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
@@ -380,10 +379,6 @@ extension UILabel {
         self.attributedText = nil
         self.text = text
     }
-    
-    
-    
-    
 }
 
 //MARK:- Run time polymorphism or Dynamic polymorphism or method overriding
