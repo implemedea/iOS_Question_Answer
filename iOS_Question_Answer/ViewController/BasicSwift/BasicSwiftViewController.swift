@@ -25,6 +25,7 @@ enum topic:String{
     case KVC = "KVC"
     case CompileTimePolymorphism = "Compile Time Polymorphism"
     case RunTimePolymorphism = "Run Time Polymorphism"
+    case OperatorOverloading = "Operator overloading"
     
 }
 
@@ -36,7 +37,23 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
     }()
     
     
-    let aryTopic = [topic.ifLet.rawValue,topic.guardLet.rawValue,topic.LazyProperty.rawValue,topic.tuple.rawValue,topic.HOF_sort.rawValue,topic.HOF_map.rawValue,topic.HOF_reduce.rawValue,topic.HOF_filter.rawValue,topic.Any_AnyObject.rawValue,topic.Attributed_String.rawValue,topic.TrailingClosure.rawValue,topic.AutoClosure.rawValue,topic.EscapeClosure.rawValue,topic.KVC.rawValue,topic.CompileTimePolymorphism.rawValue, topic.RunTimePolymorphism.rawValue] as [Any]
+    let aryTopic = [topic.ifLet.rawValue,
+                    topic.guardLet.rawValue,
+                    topic.LazyProperty.rawValue,
+                    topic.tuple.rawValue,
+                    topic.HOF_sort.rawValue,
+                    topic.HOF_map.rawValue,
+                    topic.HOF_reduce.rawValue,
+                    topic.HOF_filter.rawValue,
+                    topic.Any_AnyObject.rawValue,
+                    topic.Attributed_String.rawValue,
+                    topic.TrailingClosure.rawValue,
+                    topic.AutoClosure.rawValue,
+                    topic.EscapeClosure.rawValue,
+                    topic.KVC.rawValue,
+                    topic.CompileTimePolymorphism.rawValue,
+                    topic.RunTimePolymorphism.rawValue,
+                    topic.OperatorOverloading.rawValue] as [Any]
    
     let storyBoardMain:UIStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
 
@@ -191,7 +208,7 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
         
     }
     
-    //MARK:- Compile time polymorphism or Static polymorphism
+    //MARK:- Compile time polymorphism or Static polymorphism or method overloading
     
     func addNums(i: Int, j: Int) -> Int
     {
@@ -202,8 +219,6 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
     {
         return i + j + k
     }
-    
-    
     
     //MARK:- Trailing closure
     
@@ -317,6 +332,8 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
             
             animal = Dog()
             print(animal.makeNoise())
+        }else if(aryTopic[indexPath.row] as! String == topic.OperatorOverloading.rawValue){
+           print(CGSize(width: 10, height: 10)+CGSize(width: 10, height: 10))
         }
         
     }
@@ -363,9 +380,13 @@ extension UILabel {
         self.attributedText = nil
         self.text = text
     }
+    
+    
+    
+    
 }
 
-//MARK:- Run time polymorphism or Dynamic polymorphism
+//MARK:- Run time polymorphism or Dynamic polymorphism or method overriding
 
 class Animal
 {
@@ -391,3 +412,10 @@ class Dog : Animal
     }
 }
 
+//MARK:- operator overloading
+
+extension CGSize{
+    static func +(lhs:CGSize, rhs:CGSize)->CGSize{
+        return  CGSize(width: (lhs.width + rhs.width), height: (lhs.height + rhs.width))
+    }
+}
