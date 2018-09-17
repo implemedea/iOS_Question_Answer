@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RectPopOverViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class RectPopOverViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,protocolUpdateCell {
     var isRectPopOver:Bool = false
     
     @IBOutlet weak var tblViewRect: UITableView!
@@ -37,11 +37,11 @@ class RectPopOverViewController: UIViewController,UITableViewDelegate,UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellId:String = "RectCellId"
-        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellId)!
-        cell.textLabel?.text = self.aryContentList[indexPath.row]
-        cell.textLabel?.numberOfLines = 0
-        return cell
+        let cellID = "ChildTableViewCell"
+        let tableCell:ChildTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellID) as! ChildTableViewCell
+        tableCell.delegate = self
+        tableCell.btnNumber.setTitle(self.aryContentList[indexPath.row], for: .normal)
+        return tableCell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -58,5 +58,11 @@ class RectPopOverViewController: UIViewController,UITableViewDelegate,UITableVie
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: kNotificationNameNavigation), object: nil, userInfo: nil)
     }
 
+    //MARK:- protocol child table cell
+    
+    func updateCell(childCell: UITableViewCell) {
+        let cell:ChildTableViewCell = childCell as! ChildTableViewCell
+        print(cell.btnNumber.titleLabel?.text! as Any)
+    }
    
 }

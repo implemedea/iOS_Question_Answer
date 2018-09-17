@@ -14,6 +14,7 @@
 		FB10B7292111C2BC00037DFF /* iPadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB10B7282111C2BC00037DFF /* iPadViewController.swift */; };
 		FB130BED2125C2FD003A06A3 /* NSURLSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB130BEC2125C2FD003A06A3 /* NSURLSessionViewController.swift */; };
 		FB58EA65214BDE2400C63F28 /* Pods_iOS_Question_Answer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB58EA64214BDE2400C63F28 /* Pods_iOS_Question_Answer.framework */; };
+		FB73E880214FF07A0096CA48 /* ChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB73E87F214FF07A0096CA48 /* ChildTableViewCell.swift */; };
 		FB76D31E213D7DAA003EBDBB /* VaryForTraitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB76D31D213D7DAA003EBDBB /* VaryForTraitsViewController.swift */; };
 		FB7AEB9F21410A9400F23A26 /* Biometric.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB7AEB9721410A9400F23A26 /* Biometric.storyboard */; };
 		FB9E216F2109FE950065A1C6 /* CustomSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9E216E2109FE950065A1C6 /* CustomSlider.xib */; };
@@ -157,6 +158,7 @@
 		FB10B7282111C2BC00037DFF /* iPadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadViewController.swift; sourceTree = "<group>"; };
 		FB130BEC2125C2FD003A06A3 /* NSURLSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSURLSessionViewController.swift; sourceTree = "<group>"; };
 		FB58EA64214BDE2400C63F28 /* Pods_iOS_Question_Answer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_iOS_Question_Answer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB73E87F214FF07A0096CA48 /* ChildTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildTableViewCell.swift; sourceTree = "<group>"; };
 		FB76D31D213D7DAA003EBDBB /* VaryForTraitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaryForTraitsViewController.swift; sourceTree = "<group>"; };
 		FB7AEB9821410A9400F23A26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Biometric.storyboard; sourceTree = "<group>"; };
 		FB9E216E2109FE950065A1C6 /* CustomSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSlider.xib; sourceTree = "<group>"; };
@@ -258,6 +260,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FB73E877214FF04B0096CA48 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FB73E87E214FF0590096CA48 /* TableViewCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FB73E87E214FF0590096CA48 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FB73E87F214FF07A0096CA48 /* ChildTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		FB9E216D2109FE3A0065A1C6 /* CustomComponent */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +371,7 @@
 		FBCE543620A42E81004BCE02 /* iOS_Question_Answer */ = {
 			isa = PBXGroup;
 			children = (
+				FB73E877214FF04B0096CA48 /* Cell */,
 				FBF4F2EE2138093F00BC1A4A /* ThirdParty */,
 				FBB5720D210B3976002F61BC /* Constant */,
 				FB9E216D2109FE3A0065A1C6 /* CustomComponent */,
@@ -778,6 +797,7 @@
 				FBCE543A20A42E81004BCE02 /* BasicSwiftViewController.swift in Sources */,
 				FBC9E502212D6CBC00841A1D /* DownloadManager.swift in Sources */,
 				FBCFDF65210766EC0081DE00 /* LocalNotificationViewController.swift in Sources */,
+				FB73E880214FF07A0096CA48 /* ChildTableViewCell.swift in Sources */,
 				FB130BED2125C2FD003A06A3 /* NSURLSessionViewController.swift in Sources */,
 				FBCB821921356A96002600CE /* UploadPhotoAPIHandler.swift in Sources */,
 				FBCE543820A42E81004BCE02 /* AppDelegate.swift in Sources */,
