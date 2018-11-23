@@ -1,0 +1,6 @@
+framework module Pods_iOS_Question_Answer {
+  umbrella header "Pods-iOS_Question_Answer-umbrella.h"
+
+  export *
+  module * { export * }
+}
