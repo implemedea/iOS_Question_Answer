@@ -29,9 +29,9 @@ class BiometricIDAuth{
         switch context.biometryType{
         case .none:
             return .none
-        case .typeTouchID:
+        case .touchID:
             return .touchID
-        case .typeFaceID:
+        case .faceID:
             return .faceID
         }
     }

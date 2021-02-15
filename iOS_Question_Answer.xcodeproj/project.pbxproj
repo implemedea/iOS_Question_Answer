@@ -27,8 +27,6 @@
 		FBB4F70B21468A69002D090E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4F70821468A68002D090E /* LoginViewController.swift */; };
 		FBB4F70C21468A69002D090E /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4F70921468A68002D090E /* MasterViewController.swift */; };
 		FBB4F87321468AA1002D090E /* TouchIDAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4F87221468AA1002D090E /* TouchIDAuthentication.swift */; };
-		FBB4F88D2146937B002D090E /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB4F88021469368002D090E /* AFNetworking.framework */; };
-		FBB4F88E2146937B002D090E /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FBB4F88021469368002D090E /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FBB5720B210B3510002F61BC /* CommonFunctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB5720A210B3510002F61BC /* CommonFunctionViewController.swift */; };
 		FBB5720F210B39A8002F61BC /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB5720E210B39A8002F61BC /* GlobalConstant.swift */; };
 		FBC9E4FB212C1EF300841A1D /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC9E4FA212C1EF300841A1D /* School.swift */; };
@@ -57,62 +55,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FBB4F87F21469368002D090E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FBB4F87521469367002D090E /* AFNetworking.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 299522391BBF104D00859F49;
-			remoteInfo = "AFNetworking iOS";
-		};
-		FBB4F88121469368002D090E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FBB4F87521469367002D090E /* AFNetworking.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 299522651BBF129200859F49;
-			remoteInfo = "AFNetworking watchOS";
-		};
-		FBB4F88321469368002D090E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FBB4F87521469367002D090E /* AFNetworking.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 299522771BBF136400859F49;
-			remoteInfo = "AFNetworking OS X";
-		};
-		FBB4F88521469368002D090E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FBB4F87521469367002D090E /* AFNetworking.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2987B0A51BC408A200179A4C;
-			remoteInfo = "AFNetworking tvOS";
-		};
-		FBB4F88721469368002D090E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FBB4F87521469367002D090E /* AFNetworking.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 298D7C3B1BC2C79500FD3B3E;
-			remoteInfo = "AFNetworking iOS Tests";
-		};
-		FBB4F88921469368002D090E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FBB4F87521469367002D090E /* AFNetworking.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 298D7C4A1BC2C7B200FD3B3E;
-			remoteInfo = "AFNetworking Mac OS X Tests";
-		};
-		FBB4F88B21469368002D090E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FBB4F87521469367002D090E /* AFNetworking.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2987B0AE1BC408A200179A4C;
-			remoteInfo = "AFNetworking tvOS Tests";
-		};
-		FBB4F88F2146937B002D090E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FBB4F87521469367002D090E /* AFNetworking.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 299522381BBF104D00859F49;
-			remoteInfo = "AFNetworking iOS";
-		};
 		FBCE544C20A42E83004BCE02 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FBCE542C20A42E80004BCE02 /* Project object */;
@@ -136,7 +78,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FBB4F88E2146937B002D090E /* AFNetworking.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,7 +112,6 @@
 		FBB4F70821468A68002D090E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FBB4F70921468A68002D090E /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		FBB4F87221468AA1002D090E /* TouchIDAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchIDAuthentication.swift; sourceTree = "<group>"; };
-		FBB4F87521469367002D090E /* AFNetworking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = AFNetworking.xcodeproj; sourceTree = "<group>"; };
 		FBB5720A210B3510002F61BC /* CommonFunctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctionViewController.swift; sourceTree = "<group>"; };
 		FBB5720E210B39A8002F61BC /* GlobalConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
 		FBC9E4FA212C1EF300841A1D /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
@@ -213,7 +153,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB58EA65214BDE2400C63F28 /* Pods_iOS_Question_Answer.framework in Frameworks */,
-				FBB4F88D2146937B002D090E /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,28 +243,6 @@
 				FBB4F87221468AA1002D090E /* TouchIDAuthentication.swift */,
 			);
 			path = Biometric;
-			sourceTree = "<group>";
-		};
-		FBB4F70D21468A90002D090E /* AFNetworking-master */ = {
-			isa = PBXGroup;
-			children = (
-				FBB4F87521469367002D090E /* AFNetworking.xcodeproj */,
-			);
-			path = "AFNetworking-master";
-			sourceTree = "<group>";
-		};
-		FBB4F87621469367002D090E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FBB4F88021469368002D090E /* AFNetworking.framework */,
-				FBB4F88221469368002D090E /* AFNetworking.framework */,
-				FBB4F88421469368002D090E /* AFNetworking.framework */,
-				FBB4F88621469368002D090E /* AFNetworking.framework */,
-				FBB4F88821469368002D090E /* AFNetworking iOS Tests.xctest */,
-				FBB4F88A21469368002D090E /* AFNetworking Mac OS X Tests.xctest */,
-				FBB4F88C21469368002D090E /* AFNetworking tvOS Tests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		FBB4F8932149228E002D090E /* BasicSwift */ = {
@@ -470,7 +387,6 @@
 		FBF4F2EE2138093F00BC1A4A /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				FBB4F70D21468A90002D090E /* AFNetworking-master */,
 				FBF4F3B42138094000BC1A4A /* BackgroundSession */,
 			);
 			path = ThirdParty;
@@ -502,7 +418,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				FBB4F8902146937B002D090E /* PBXTargetDependency */,
 			);
 			name = iOS_Question_Answer;
 			productName = iOS_Question_Answer;
@@ -592,12 +507,6 @@
 			mainGroup = FBCE542B20A42E80004BCE02;
 			productRefGroup = FBCE543520A42E81004BCE02 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = FBB4F87621469367002D090E /* Products */;
-					ProjectRef = FBB4F87521469367002D090E /* AFNetworking.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				FBCE543320A42E81004BCE02 /* iOS_Question_Answer */,
@@ -606,58 +515,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		FBB4F88021469368002D090E /* AFNetworking.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AFNetworking.framework;
-			remoteRef = FBB4F87F21469368002D090E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FBB4F88221469368002D090E /* AFNetworking.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AFNetworking.framework;
-			remoteRef = FBB4F88121469368002D090E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FBB4F88421469368002D090E /* AFNetworking.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AFNetworking.framework;
-			remoteRef = FBB4F88321469368002D090E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FBB4F88621469368002D090E /* AFNetworking.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AFNetworking.framework;
-			remoteRef = FBB4F88521469368002D090E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FBB4F88821469368002D090E /* AFNetworking iOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "AFNetworking iOS Tests.xctest";
-			remoteRef = FBB4F88721469368002D090E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FBB4F88A21469368002D090E /* AFNetworking Mac OS X Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "AFNetworking Mac OS X Tests.xctest";
-			remoteRef = FBB4F88921469368002D090E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FBB4F88C21469368002D090E /* AFNetworking tvOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "AFNetworking tvOS Tests.xctest";
-			remoteRef = FBB4F88B21469368002D090E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FBCE543220A42E81004BCE02 /* Resources */ = {
@@ -734,16 +591,18 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-iOS_Question_Answer/Pods-iOS_Question_Answer-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-iOS_Question_Answer/Pods-iOS_Question_Answer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS_Question_Answer/Pods-iOS_Question_Answer-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS_Question_Answer/Pods-iOS_Question_Answer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D57512E727B08DA322F48346 /* [CP] Check Pods Manifest.lock */ = {
@@ -825,11 +684,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FBB4F8902146937B002D090E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "AFNetworking iOS";
-			targetProxy = FBB4F88F2146937B002D090E /* PBXContainerItemProxy */;
-		};
 		FBCE544D20A42E83004BCE02 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FBCE543320A42E81004BCE02 /* iOS_Question_Answer */;

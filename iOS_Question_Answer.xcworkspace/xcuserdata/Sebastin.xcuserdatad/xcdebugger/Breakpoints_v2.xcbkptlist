@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
+   uuid = "BBF9C777-6F00-470A-B041-6B94344C1A4B"
    type = "0"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "88FF7E86-6263-42AD-BF92-1A1C04A55BE3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -22,6 +24,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "5874150E-F7C2-4B53-BCDA-9ADB308C8029"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -38,6 +41,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "AE9C974B-E05A-4DF8-9C22-06C6DED80897"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -54,6 +58,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "808B03D3-B7D8-403D-AA6E-8202994B0CF3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -70,6 +75,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "6E124659-5F59-431F-91DB-3D335B17F722"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -86,6 +92,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "DDABD295-2BEF-4C0B-8DC2-6E4B9A2BF2CC"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -102,6 +109,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "96152FEA-3A36-4404-B338-FE35D6594F1B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -118,6 +126,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "3C6550DA-5454-4290-B98B-AA712E9CC6D2"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -127,13 +136,14 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
             endingLineNumber = "55"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "D2C5457E-481C-46AD-AD27-FE57C99FB028"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -150,6 +160,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "1688E1CE-0A9D-4377-B573-0584B80566C4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -166,6 +177,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "68B3EC90-3A6F-4CDD-AE74-ED43EBDED457"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -182,6 +194,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "19F06E76-A6C6-452C-BEAA-EF44479A4088"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -198,6 +211,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "A16695D0-4D3A-48AD-8A99-E1AC33ADBF03"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -211,34 +225,34 @@
             landmarkType = "7">
             <Locations>
                <Location
+                  uuid = "A16695D0-4D3A-48AD-8A99-E1AC33ADBF03 - 2d121cf9678a73ae"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "iOS_Question_Answer.LoginViewController.touchIDLoginAction(sender: __ObjC.UIButton) -&gt; ()"
+                  symbolName = "iOS_Question_Answer.LoginViewController.touchIDLoginAction(sender: __C.UIButton) -&gt; ()"
                   moduleName = "iOS_Question_Answer"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Sebastin/Documents/Sebastin/iOS_Project/Git/iOS_Question_Answer/ViewController/Biometric/LoginViewController.swift"
-                  timestampString = "558616774.648128"
+                  urlString = "file:///Users/Sebastin/Documents/Sebastin/Git_Sebastin/iOS_Question_Answer/iOS_Question_Answer/ViewController/Biometric/LoginViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "168"
                   endingLineNumber = "168"
-                  offsetFromSymbolStart = "49">
+                  offsetFromSymbolStart = "97">
                </Location>
                <Location
+                  uuid = "A16695D0-4D3A-48AD-8A99-E1AC33ADBF03 - 220bdfce5eb68168"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in iOS_Question_Answer.LoginViewController.touchIDLoginAction(sender: __ObjC.UIButton) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in iOS_Question_Answer.LoginViewController.touchIDLoginAction(sender: __C.UIButton) -&gt; ()"
                   moduleName = "iOS_Question_Answer"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Sebastin/Documents/Sebastin/iOS_Project/Git/iOS_Question_Answer/ViewController/Biometric/LoginViewController.swift"
-                  timestampString = "558616774.651029"
+                  urlString = "file:///Users/Sebastin/Documents/Sebastin/Git_Sebastin/iOS_Question_Answer/iOS_Question_Answer/ViewController/Biometric/LoginViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "168"
                   endingLineNumber = "168"
-                  offsetFromSymbolStart = "115">
+                  offsetFromSymbolStart = "198">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -246,6 +260,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "22256913-5E5A-44AA-A8A9-FC96E566FF10"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -262,6 +277,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "732C9A94-F77D-46CB-9975-4CFB4EBCCAC0"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -273,38 +289,17 @@
             endingLineNumber = "45"
             landmarkName = "authenticateUser(completion:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in iOS_Question_Answer.BiometricIDAuth.authenticateUser(completion: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "iOS_Question_Answer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Sebastin/Documents/Sebastin/iOS_Project/Git/iOS_Question_Answer/ViewController/Biometric/TouchIDAuthentication.swift"
-                  timestampString = "558616839.38597"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "111">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in iOS_Question_Answer.BiometricIDAuth.authenticateUser(completion: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "iOS_Question_Answer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Sebastin/Documents/Sebastin/iOS_Project/Git/iOS_Question_Answer/ViewController/Biometric/TouchIDAuthentication.swift"
-                  timestampString = "558616839.389773"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "46">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.RuntimeIssueBreakpoint">
+         <BreakpointContent
+            uuid = "0F704F51-AEEA-4A6B-956E-3E289423EE17"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            type = "1">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

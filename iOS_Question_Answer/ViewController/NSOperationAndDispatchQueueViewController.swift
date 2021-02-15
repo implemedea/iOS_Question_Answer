@@ -205,7 +205,9 @@ class NSOperationAndDispatchQueueViewController: UIViewController {
             self.getImageDataAsync(url: url, returnCompletion: { (data) in
                 DispatchQueue.main.async(execute: {
                     let imgView = aryImageView[index]
-                    imgView?.image = UIImage(data:data as! Data)
+                    if let imgData = data as? Data {
+                        imgView?.image = UIImage(data: imgData)
+                    }
                     dispatchGroup.leave()
                 })
             })
@@ -230,7 +232,9 @@ class NSOperationAndDispatchQueueViewController: UIViewController {
                 self.getImageDataAsync(url: url, returnCompletion: { (data) in
                     DispatchQueue.main.async(execute: {
                         let imgView = aryImageView[index]
-                        imgView?.image = UIImage(data:data as! Data)
+                        if let imgData = data as? Data {
+                            imgView?.image = UIImage(data:imgData)
+                        }
                         dispatchGroup.leave()
                     })
                 })

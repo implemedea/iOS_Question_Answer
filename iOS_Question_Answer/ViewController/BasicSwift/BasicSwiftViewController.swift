@@ -241,7 +241,7 @@ class BasicSwiftViewController: UIViewController,UITableViewDelegate,UITableView
             if let data = try? Data(contentsOf: URL(string:url)!){
                 completion(data,nil)
             }else{
-                let error:Error = "image not found" as! Error
+                let error:Error = NSError(domain: "", code: 404, userInfo: ["Error": "image not found"])
                 completion(nil,error)
             }
         }
